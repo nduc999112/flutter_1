@@ -337,7 +337,7 @@ class _HomeView2State extends State<HomeView2> {
                                                 'Xóa shop',
                                                 style: TextStyle(
                                                     color: Color(0xffd2523f),
-                                                    fontSize: 17),
+                                                    fontSize: 15),
                                               )
                                             ],
                                           ),
