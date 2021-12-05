@@ -23,7 +23,7 @@ class _DialogView2State extends State<DialogView2> {
           Container(
             decoration: BoxDecoration(
                 color: Color(0xfff4f4f4),
-                border: Border(bottom: BorderSide(width: 1.0))),
+                ),
             height: 50,
             width: double.infinity,
             child: Center(
