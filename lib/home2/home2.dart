@@ -299,9 +299,7 @@ class _HomeView2State extends State<HomeView2> {
                                             onTap: () {
                                               showDialog(
                                                   context: context,
-                                                  builder: (ctxt) => Dialog(
-                                                        child: DialogView(),
-                                                      ));
+                                                  builder: (ctxt) => DialogView());
                                             },
                                             child: Row(
                                               children: [
@@ -509,6 +507,10 @@ Widget ghichu(BuildContext context) {
             showDialog(
                 context: context,
                 builder: (ctxt) => Dialog(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(15.0),
+                  ),
+                  clipBehavior: Clip.antiAlias,
                       child: DialogView2(),
                     ));
           },
