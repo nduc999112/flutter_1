@@ -14,6 +14,7 @@ class _HomeView3State extends State<HomeView3>  with SingleTickerProviderStateMi
   List<Statee>? list;
   List<Model>? models;
   List<Model2>? models2;
+  List<Model1>? models1;
   List<Product>? product;
   List<Model3>? models3;
   List<Info> ?infos;
@@ -25,7 +26,7 @@ class _HomeView3State extends State<HomeView3>  with SingleTickerProviderStateMi
       Info(
         title: '中文不好我的中文'
       )
-    ]
+    ];
     product=[
       Product(
         image: 'https://cf.shopee.vn/file/202d7b108a8549f373da092b310bc5f1_tn',
@@ -54,6 +55,16 @@ class _HomeView3State extends State<HomeView3>  with SingleTickerProviderStateMi
         thetich: '---',
         state: 'Đã nhận hàng',
         time: '11:22-05/11/2021'
+      )
+    ];
+    models1=[
+      Model1(
+        title: 'người nhận',
+        diachi: 'Nguyễn Trần tuấn\n0988529669',
+      ),
+      Model1(
+        title: 'Địa chỉ',
+        diachi: '505 Minh Khai\n Quận Hai Bà Trưng\n Hà Nội',
       )
     ];
     models=[
@@ -225,6 +236,22 @@ class _HomeView3State extends State<HomeView3>  with SingleTickerProviderStateMi
                               ),
                             ),
                             //component2
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(10),
+                                ),
+                                child: ExpansionTile(
+                                    title: const Text('Thông tin người nhận',style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold),),
+                                    children: models1!.mapIndexed((int,model)=>item(
+                                        title: model.title,
+                                        price: model.diachi,
+                                    )).toList()
+                                ),
+                              ),
+                            ),
                             Padding(
                               padding: const EdgeInsets.all(8.0),
                               child: Container(
@@ -594,6 +621,11 @@ class Model{
   String ?price;
   String ?priceHide;
   Model({this.title,this.price,this.priceHide});
+}
+class Model1{
+  String? title;
+  String ?diachi;
+  Model1({this.diachi, this.title});
 }
 class Model2{
   String ?makien;
