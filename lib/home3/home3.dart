@@ -621,10 +621,10 @@ Widget item({String ?title,String ?price,bool? hide,String ? pricehide,Color? co
 Color? getcolor(int index){
   Color ?color;
   if(index==4 ||index==7){
-    color=Colors.red;
+    color=Color(0xFFd6574f);
   }
   if(index==5){
-    color=Colors.green;
+    color=Color(0xFF289b63);
   }
   return color;
 }
