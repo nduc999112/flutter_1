@@ -57,10 +57,6 @@ class _HomeView4State extends State<HomeView4> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Text('chi tiết đơn hàng'),
-          backgroundColor: Color(0xffec846b),
-        ),
         backgroundColor: Colors.grey,
         body: Padding(
             padding: const EdgeInsets.all(10),

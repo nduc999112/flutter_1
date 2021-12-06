@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_1/home3/state.dart';
 import 'package:collection/collection.dart';
+import 'package:flutter_1/home4/home4.dart';
 class HomeView3 extends StatefulWidget {
   const HomeView3({Key? key}) : super(key: key);
 
@@ -18,6 +19,7 @@ class _HomeView3State extends State<HomeView3>  with SingleTickerProviderStateMi
   List<Model3>? models3;
   List<Info> ?infos;
   List<Histoty>? historys;
+  List<Model1> ?models1;
   TabController ?_tabController;
   @override
   void initState() {
@@ -202,7 +204,6 @@ class _HomeView3State extends State<HomeView3>  with SingleTickerProviderStateMi
                 fontSize: 15,
               ),
               tabs: <Widget>[
-
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Text('Thông tin'),
@@ -236,7 +237,7 @@ class _HomeView3State extends State<HomeView3>  with SingleTickerProviderStateMi
                                     children: [
                                       Row(
                                         children: [
-                                          Text('Mã đơn hàng:',style: TextStyle(color: Colors.grey[400],fontWeight: FontWeight.normal)),
+                                          Text('Mã đơn hàng: ',style: TextStyle(color: Colors.grey[400],fontWeight: FontWeight.normal)),
                                           Text('NP12345678',style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold),)
                                         ],
                                       ),
@@ -257,23 +258,6 @@ class _HomeView3State extends State<HomeView3>  with SingleTickerProviderStateMi
                             ),
                             //component2
                             Padding(
-                              padding: const EdgeInsets.symmetric(horizontal: 8),
-                              child: Container(
-                                margin: EdgeInsets.only(bottom: 10),
-                                decoration: BoxDecoration(
-                                  color: Colors.white,
-                                  borderRadius: BorderRadius.circular(10),
-                                ),
-                                child: ExpansionTile(
-                                    title: const Text('Thông tin người nhận',style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold),),
-                                    children: models1!.mapIndexed((int,model)=>item(
-                                        title: model.title,
-                                        price: model.diachi,
-                                    )).toList()
-                                ),
-                              ),
-                            ),
-                            Padding(
                               padding: const EdgeInsets.all(8.0),
                               child: Container(
                                 decoration: BoxDecoration(
@@ -283,6 +267,7 @@ class _HomeView3State extends State<HomeView3>  with SingleTickerProviderStateMi
                                 child: ExpansionTile(
                                     title: const Text('Thông tin tài chính',style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold),),
                                     children: models!.mapIndexed((int,model)=>item(
+                                      index: int,
                                         title: model.title,
                                         price: model.price,
                                         pricehide: model.priceHide
@@ -334,7 +319,25 @@ class _HomeView3State extends State<HomeView3>  with SingleTickerProviderStateMi
                                 ),
                               ),
                             ),
-                            //commonent5
+                            //component5
+                            Padding(
+                              padding: const EdgeInsets.symmetric(horizontal: 8),
+                              child: Container(
+                                margin: EdgeInsets.only(bottom: 10),
+                                decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(10),
+                                ),
+                                child: ExpansionTile(
+                                    title:  Text('Thông tin người nhận',style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold),),
+                                    children: models1!.mapIndexed((int,model)=>infoperson(
+                                      title: model.title,
+                                      nguoinhan: model.diachi,
+                                    )).toList()
+                                ),
+                              ),
+                            ),
+                            //commonent6
                             Padding(
                               padding: const EdgeInsets.symmetric(horizontal: 8),
                               child: Container(
@@ -414,12 +417,7 @@ class _HomeView3State extends State<HomeView3>  with SingleTickerProviderStateMi
                     ),
                   ),
                   Tab2(list!),
-                  Center(
-                    child: Text(
-                      'HEIBGETRANKE',
-                      style: TextStyle(fontSize: 30, fontWeight: FontWeight.w600),
-                    ),
-                  ),
+                  HomeView4()
 
 
                 ],
@@ -571,6 +569,23 @@ Widget childitem2({String ? value,String ? title}){
     ],
   );
 }
+Widget infoperson({String ? title,String ? nguoinhan}){
+  return  Padding(
+      padding:  EdgeInsets.symmetric(horizontal:16),
+      child: Column(
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(title!,style: TextStyle(color: Colors.grey[600]),),
+              Text(nguoinhan!,)
+            ],
+          ),
+          Divider(),
+        ],
+      )
+  );
+}
 Widget item({String ?title,String ?price,bool? hide,String ? pricehide,Color? colorText,int? index}){
   return Padding(
     padding: const EdgeInsets.all(8.0),
@@ -592,7 +607,7 @@ Widget item({String ?title,String ?price,bool? hide,String ? pricehide,Color? co
                     ),),
                   ),
                   SizedBox(width: 5,),
-                  Text('${price??''}',style: TextStyle(fontWeight: FontWeight.bold,color: colorText),),
+                  Text('${price??''}',style: TextStyle(fontWeight: FontWeight.bold,color: getcolor(index!)),),
                 ],
               )
             ],
@@ -602,6 +617,16 @@ Widget item({String ?title,String ?price,bool? hide,String ? pricehide,Color? co
       ],
     )
   );
+}
+Color? getcolor(int index){
+  Color ?color;
+  if(index==4 ||index==7){
+    color=Colors.red;
+  }
+  if(index==5){
+    color=Colors.green;
+  }
+  return color;
 }
 Widget itemProduct({String? image,String? title,String ?title1,String?id,String?idProduct,String ?number}){
   return Container(
@@ -712,8 +737,8 @@ Widget itemHistory({String? time,String ? price,String? type,String?content }){
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Flexible(flex:1,child: Text('Nội dung')),
-            Flexible(flex:3,child: Text(content!, ),)
+            Flexible(flex:3,child: Text('Nội dung')),
+            Flexible(flex:2,child: Text(content!,),)
           ],
         ),
         Divider()
@@ -773,4 +798,9 @@ class Histoty{
   String ? type;
   String ? content;
   Histoty({this.time,this.price,this.type,this.content});
+}
+class Model1{
+  String ?diachi;
+  String ?title;
+  Model1({this.diachi,this.title});
 }
