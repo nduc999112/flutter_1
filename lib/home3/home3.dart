@@ -76,6 +76,16 @@ class _HomeView3State extends State<HomeView3>  with SingleTickerProviderStateMi
         time: '11:22-05/11/2021'
       )
     ];
+    models1=[
+      Model1(
+        title: 'người nhận',
+        diachi: 'Nguyễn Trần tuấn\n0988529669',
+      ),
+      Model1(
+        title: 'Địa chỉ',
+        diachi: '505 Minh Khai\n Quận Hai Bà Trưng\n Hà Nội',
+      )
+    ];
     models=[
       Model(
         title: 'Tổng tiền hàng (Y260)',
@@ -250,6 +260,22 @@ class _HomeView3State extends State<HomeView3>  with SingleTickerProviderStateMi
                               padding: const EdgeInsets.symmetric(horizontal: 8),
                               child: Container(
                                 margin: EdgeInsets.only(bottom: 10),
+                                decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(10),
+                                ),
+                                child: ExpansionTile(
+                                    title: const Text('Thông tin người nhận',style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold),),
+                                    children: models1!.mapIndexed((int,model)=>item(
+                                        title: model.title,
+                                        price: model.diachi,
+                                    )).toList()
+                                ),
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Container(
                                 decoration: BoxDecoration(
                                   color: Colors.white,
                                   borderRadius: BorderRadius.circular(10),
@@ -430,6 +456,19 @@ PreferredSizeWidget _appbar() {
         child: Icon(Icons.home),
       )
     ],
+    // bottom: const TabBar(
+    //   tabs: <Widget>[
+    //     Tab(
+    //         child: Text('Thông tin',style: TextStyle(color: Colors.black),)
+    //     ),
+    //     Tab(
+    //         child: Text('Hành trình',style: TextStyle(color: Colors.black),)
+    //     ),
+    //     Tab(
+    //         child: Text('Trao đổi với Naipot',style: TextStyle(color: Colors.black),)
+    //     ),
+    //   ],
+    // ),
   );
 }
 Widget Tab2(List<Statee> list){

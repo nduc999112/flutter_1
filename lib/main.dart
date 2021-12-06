@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'home/home.dart';
 import 'home2/home2.dart';
 import 'home3/home3.dart';
+import 'home4/home4.dart';
 
 void main() {
   runApp(
@@ -30,7 +31,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const HomeView3(),
+      home:  HomeView3(),
     );
   }
 }
