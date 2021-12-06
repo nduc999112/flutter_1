@@ -16,10 +16,16 @@ class _HomeView3State extends State<HomeView3>  with SingleTickerProviderStateMi
   List<Model2>? models2;
   List<Product>? product;
   List<Model3>? models3;
+  List<Info> ?infos;
   TabController ?_tabController;
   @override
   void initState() {
     // TODO: implement initState
+    infos=[
+      Info(
+        title: '中文不好我的中文'
+      )
+    ]
     product=[
       Product(
         image: 'https://cf.shopee.vn/file/202d7b108a8549f373da092b310bc5f1_tn',
@@ -617,5 +623,5 @@ class Model3{
 class Info{
   String ? title;
   String ? value;
-
+  Info({this.title,this.value});
 }
