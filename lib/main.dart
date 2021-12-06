@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'home/home.dart';
 import 'home2/home2.dart';
+import 'home3/home3.dart';
 
 void main() {
   runApp(
@@ -29,7 +30,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const HomeView2(),
+      home: const HomeView3(),
     );
   }
 }
