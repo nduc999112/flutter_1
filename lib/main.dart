@@ -5,6 +5,7 @@ import 'home/home.dart';
 import 'home2/home2.dart';
 import 'home3/home3.dart';
 import 'home4/home4.dart';
+import 'home5_duc_0712/home5_view.dart';
 
 void main() {
   runApp(
@@ -26,7 +27,7 @@ class MyApp extends StatelessWidget {
             theme: ThemeData(
               primarySwatch: Colors.blue,
             ),
-            home:  HomeView3(),
+            home:  Home5View(),
           )
 
       );
