@@ -29,13 +29,13 @@ class _HomeView3State extends State<HomeView3>  with SingleTickerProviderStateMi
         time: '12:05 - 26/10/2021',
         price: '-703.430đ',
         type: 'Đặt cọc',
-        content: 'Đặt cọc cho đơn hàng NP1243554'
+        content: 'Đặt cọc cho đơn hàng NP1243554aa'
       ),
       Histoty(
           time: '12:05 - 26/10/2021',
           price: '-703.430đ',
           type: 'Đặt cọc',
-          content: 'Đặt cọc cho đơn hàng NP1243554fffffffffffff'
+          content: 'Đặt cọc cho đơn hàng NP1243554fff'
       ),
     ];
     infos=[
@@ -85,7 +85,7 @@ class _HomeView3State extends State<HomeView3>  with SingleTickerProviderStateMi
       ),
       Model1(
         title: 'Địa chỉ',
-        diachi: '505 Minh Khai\n Quận Hai Bà Trưng\n Hà Nội',
+        diachi: '505 Minh Khai\nQuận Hai Bà Trưng\nHà Nội',
       )
     ];
     models=[
