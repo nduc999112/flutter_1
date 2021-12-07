@@ -191,10 +191,11 @@ class _HomeView3State extends State<HomeView3>  with SingleTickerProviderStateMi
         body: Column(
           children: [
             TabBar(
+
               controller: _tabController,
               labelColor: Colors.black,
               isScrollable: true,
-              indicatorColor: Colors.transparent,
+              indicatorColor:  Color(0xffec846b),
               unselectedLabelColor: Colors.grey,
               unselectedLabelStyle: TextStyle(
                 fontSize: 15,
@@ -264,14 +265,20 @@ class _HomeView3State extends State<HomeView3>  with SingleTickerProviderStateMi
                                   color: Colors.white,
                                   borderRadius: BorderRadius.circular(10),
                                 ),
-                                child: ExpansionTile(
-                                    title: const Text('Thông tin tài chính',style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold),),
-                                    children: models!.mapIndexed((int,model)=>item(
-                                      index: int,
-                                        title: model.title,
-                                        price: model.price,
-                                        pricehide: model.priceHide
-                                    )).toList()
+                                child: Theme(
+                                  data: ThemeData().copyWith(dividerColor: Colors.transparent),
+                                  child: ExpansionTile(
+                                      collapsedIconColor: Colors.red,
+                                      // sets the color of the arrow when expanded
+                                      iconColor: Colors.green,
+                                      title:  Text('Thông tin tài chính',style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold),),
+                                      children: models!.mapIndexed((int,model)=>item(
+                                        index: int,
+                                          title: model.title,
+                                          price: model.price,
+                                          pricehide: model.priceHide
+                                      )).toList()
+                                  ),
                                 ),
                               ),
                             ),
@@ -284,16 +291,19 @@ class _HomeView3State extends State<HomeView3>  with SingleTickerProviderStateMi
                                   color: Colors.white,
                                   borderRadius: BorderRadius.circular(10),
                                 ),
-                                child: ExpansionTile(
-                                    title:  Text('Danh sách kiện hàng (${models2!.length})',style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold),),
-                                    children: models2!.mapIndexed((int,model)=>item2(
-                                        makien: model.makien,
-                                        cannang: model.cannang,
-                                        cannangprice: model.cannangprice,
-                                        thetich: model.thetich,
-                                        state: model.state,
-                                        time: model.time
-                                    )).toList()
+                                child: Theme(
+                                  data: ThemeData().copyWith(dividerColor: Colors.transparent),
+                                  child: ExpansionTile(
+                                      title:  Text('Danh sách kiện hàng (${models2!.length})',style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold),),
+                                      children: models2!.mapIndexed((int,model)=>item2(
+                                          makien: model.makien,
+                                          cannang: model.cannang,
+                                          cannangprice: model.cannangprice,
+                                          thetich: model.thetich,
+                                          state: model.state,
+                                          time: model.time
+                                      )).toList()
+                                  ),
                                 ),
                               ),
                             ),
@@ -306,16 +316,19 @@ class _HomeView3State extends State<HomeView3>  with SingleTickerProviderStateMi
                                   color: Colors.white,
                                   borderRadius: BorderRadius.circular(10),
                                 ),
-                                child: ExpansionTile(
-                                    title:  Text('Sản phẩm',style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold),),
-                                    children:  product!.mapIndexed((int,product)=>itemProduct(
-                                        image: product.image,
-                                        title: product.title,
-                                        title1: product.title2,
-                                        id: product.id,
-                                        idProduct: product.idproduct,
-                                        number: product.number
-                                    )).toList()
+                                child: Theme(
+                                  data: ThemeData().copyWith(dividerColor: Colors.transparent),
+                                  child: ExpansionTile(
+                                      title:  Text('Sản phẩm',style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold),),
+                                      children:  product!.mapIndexed((int,product)=>itemProduct(
+                                          image: product.image,
+                                          title: product.title,
+                                          title1: product.title2,
+                                          id: product.id,
+                                          idProduct: product.idproduct,
+                                          number: product.number
+                                      )).toList()
+                                  ),
                                 ),
                               ),
                             ),
@@ -328,12 +341,15 @@ class _HomeView3State extends State<HomeView3>  with SingleTickerProviderStateMi
                                   color: Colors.white,
                                   borderRadius: BorderRadius.circular(10),
                                 ),
-                                child: ExpansionTile(
-                                    title:  Text('Thông tin người nhận',style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold),),
-                                    children: models1!.mapIndexed((int,model)=>infoperson(
-                                      title: model.title,
-                                      nguoinhan: model.diachi,
-                                    )).toList()
+                                child: Theme(
+                                  data: ThemeData().copyWith(dividerColor: Colors.transparent),
+                                  child: ExpansionTile(
+                                      title:  Text('Thông tin người nhận',style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold),),
+                                      children: models1!.mapIndexed((int,model)=>infoperson(
+                                        title: model.title,
+                                        nguoinhan: model.diachi,
+                                      )).toList()
+                                  ),
                                 ),
                               ),
                             ),
@@ -346,30 +362,36 @@ class _HomeView3State extends State<HomeView3>  with SingleTickerProviderStateMi
                                   color: Colors.white,
                                   borderRadius: BorderRadius.circular(10),
                                 ),
-                                child: ExpansionTile(
-                                    title:  Text('Khối lượng hàng hóa',style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold),),
-                                    children: models3!.mapIndexed((int,model3)=>itemKhoiLuongHH(
-                                      title: model3.title,
-                                      kg: model3.kg
-                                    )).toList()
-                                ),
-                              ),
-                            ),
-                            //commonent6
-                            Padding(
-                              padding: const EdgeInsets.symmetric(horizontal: 8),
-                              child: Container(
-                                margin: EdgeInsets.only(bottom: 10),
-                                decoration: BoxDecoration(
-                                  color: Colors.white,
-                                  borderRadius: BorderRadius.circular(10),
-                                ),
-                                child: ExpansionTile(
-                                    title:  Text('Thông tin khác',style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold),),
-                                    children: infos!.mapIndexed((int,model3)=>itemKhoiLuongHH(
+                                child: Theme(
+                                  data: ThemeData().copyWith(dividerColor: Colors.transparent),
+                                  child: ExpansionTile(
+                                      title:  Text('Khối lượng hàng hóa',style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold),),
+                                      children: models3!.mapIndexed((int,model3)=>itemKhoiLuongHH(
                                         title: model3.title,
-                                        kg: model3.value
-                                    )).toList()
+                                        kg: model3.kg
+                                      )).toList()
+                                  ),
+                                ),
+                              ),
+                            ),
+                            //commonent6
+                            Padding(
+                              padding: const EdgeInsets.symmetric(horizontal: 8),
+                              child: Container(
+                                margin: EdgeInsets.only(bottom: 10),
+                                decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(10),
+                                ),
+                                child: Theme(
+                                  data: ThemeData().copyWith(dividerColor: Colors.transparent),
+                                  child: ExpansionTile(
+                                      title:  Text('Thông tin khác',style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold),),
+                                      children: infos!.mapIndexed((int,model3)=>itemKhoiLuongHH(
+                                          title: model3.title,
+                                          kg: model3.value
+                                      )).toList()
+                                  ),
                                 ),
                               ),
                             ),
@@ -382,12 +404,15 @@ class _HomeView3State extends State<HomeView3>  with SingleTickerProviderStateMi
                                   color: Colors.white,
                                   borderRadius: BorderRadius.circular(10),
                                 ),
-                                child: ExpansionTile(
-                                    title:  Text('Dịch vụ sử dụng',style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold),),
-                                    children: infos!.mapIndexed((int,model3)=>itemKhoiLuongHH(
-                                        title: model3.title,
-                                        kg: model3.value
-                                    )).toList()
+                                child: Theme(
+                                  data: ThemeData().copyWith(dividerColor: Colors.transparent),
+                                  child: ExpansionTile(
+                                      title:  Text('Dịch vụ sử dụng',style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold),),
+                                      children: infos!.mapIndexed((int,model3)=>itemKhoiLuongHH(
+                                          title: model3.title,
+                                          kg: model3.value
+                                      )).toList()
+                                  ),
                                 ),
                               ),
                             ),
@@ -400,14 +425,17 @@ class _HomeView3State extends State<HomeView3>  with SingleTickerProviderStateMi
                                   color: Colors.white,
                                   borderRadius: BorderRadius.circular(10),
                                 ),
-                                child: ExpansionTile(
-                                    title:  Text('Lịch sử giao dịch',style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold),),
-                                    children:historys!.mapIndexed((int,history)=>itemHistory(
-                                        time: history.time,
-                                      price: history.price,
-                                      type: history.type,
-                                      content: history.content
-                                    )).toList()
+                                child: Theme(
+                                  data: ThemeData().copyWith(dividerColor: Colors.transparent),
+                                  child: ExpansionTile(
+                                      title:  Text('Lịch sử giao dịch',style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold),),
+                                      children:historys!.mapIndexed((int,history)=>itemHistory(
+                                          time: history.time,
+                                        price: history.price,
+                                        type: history.type,
+                                        content: history.content
+                                      )).toList()
+                                  ),
                                 ),
                               ),
                             ),
