@@ -191,7 +191,6 @@ class _HomeView3State extends State<HomeView3>  with SingleTickerProviderStateMi
         body: Column(
           children: [
             TabBar(
-
               controller: _tabController,
               labelColor: Colors.black,
               isScrollable: true,
@@ -522,8 +521,8 @@ Widget Tab2(List<Statee> list){
                           Column(
                             children: [
                               Container(
-                                width: 16,
-                                height: 16,
+                                width: MediaQuery.of(context).size.width*0.1,
+                                height: MediaQuery.of(context).size.width*0.05,
                                 decoration: BoxDecoration(
                                     shape: BoxShape.circle,
                                     color: Color(0xFFe55634)),
