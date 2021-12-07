@@ -57,7 +57,7 @@ class _HomeView4State extends State<HomeView4> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.grey,
+        backgroundColor: Color(0xfff0f0f0),
         body: Padding(
             padding: const EdgeInsets.all(10),
             child: Container(
@@ -80,9 +80,7 @@ class _HomeView4State extends State<HomeView4> {
                       ],
                     ),
                   ),
-                  Divider(
-                    color: Colors.black,
-                  ),
+                  Divider(),
                   Flexible(
                     flex: 8,
                     child: SingleChildScrollView(
@@ -100,11 +98,10 @@ class _HomeView4State extends State<HomeView4> {
                                   children: [
                                     Text("${listdata[index].date}",
                                         style: TextStyle(
-                                            fontStyle: FontStyle.italic,
-                                            fontSize: 14,
+                                            fontSize: 12,
                                             color: Color(0xff5a5a5a))),
                                     SizedBox(
-                                      height: 5,
+                                      height: 2,
                                     ),
                                     Text(
                                       "${listdata[index].title}",
@@ -124,53 +121,63 @@ class _HomeView4State extends State<HomeView4> {
                         )),
                   ),
                   // Divider(color: Colors.black,),
-                  Expanded(
-                    flex: 1,
-                    child: Padding(
-                      padding: const EdgeInsets.only(left: 10, right: 10),
-                      child: Row(
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          Expanded(
-                            flex: 8,
-                            child: Container(
-                              height: 40,
-                              width: double.maxFinite,
-                              // child: Row(
-                              //   mainAxisSize: MainAxisSize.min,
-                              //   children: [
-                              child: TextField(
-                                controller: user,
-                                style: TextStyle(
-                                  height: 1,
-                                ),
-                                decoration: InputDecoration(
-                                    border: OutlineInputBorder(
-                                      borderRadius: BorderRadius.circular(1),
-                                    ),
-                                    filled: true,
-                                    hintText: 'Quý Khách có thể trao đổi tại đây',
-                                    fillColor: Colors.white70),
-                              ),
 
-                            ),
-                          ),
-                          Expanded(
-                            flex: 2,
-                            child: InkWell(
-                              onTap: (){
-                                user.text ="";
-                              },
-                              child: Container(
-                                height: 40,
-                                decoration: BoxDecoration(
-                                  color: Color(0xffd4614e),
+                  SingleChildScrollView(
+                    child: Padding(
+                      padding: const EdgeInsets.only(bottom: 10),
+                      child: Expanded(
+                        flex: 1,
+                        child: Padding(
+                          padding: const EdgeInsets.only(left: 10, right: 10),
+                          child: Row(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              Expanded(
+                                flex: 8,
+                                child: Container(
+                                  height: 40,
+                                  width: double.maxFinite,
+                                  // child: Row(
+                                  //   mainAxisSize: MainAxisSize.min,
+                                  //   children: [
+                                  child: GestureDetector(
+                                    onTap: () => FocusManager.instance.primaryFocus?.unfocus(),
+                                    child: TextField(
+                                      controller: user,
+                                      decoration: InputDecoration(
+                                          border: OutlineInputBorder(
+                                            borderRadius: BorderRadius.circular(1),
+                                          ),
+                                          enabledBorder: OutlineInputBorder(
+                                            borderSide: BorderSide(color: Color(0xfff5f5f5)),
+                                          ),
+                                          contentPadding: EdgeInsets.only(left: 10),
+                                          hintText: 'Quý Khách có thể trao đổi tại đây',
+                                          hintStyle: TextStyle(color: Color(0xffdddddd), fontSize: 15),
+                                          fillColor: Colors.white70),
+                                    ),
+                                  ),
+
                                 ),
-                                child: Center(child: Text('Gửi', style: TextStyle(color: Colors.white),)),
                               ),
-                            ),
-                          )
-                        ],
+                              Expanded(
+                                flex: 2,
+                                child: InkWell(
+                                  onTap: (){
+                                    user.text ="";
+                                  },
+                                  child: Container(
+                                    height: 40,
+                                    decoration: BoxDecoration(
+                                      color: Color(0xffd4614e),
+                                    ),
+                                    child: Center(child: Text('Gửi', style: TextStyle(color: Colors.white),)),
+                                  ),
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
                       ),
                     ),
                   ),
