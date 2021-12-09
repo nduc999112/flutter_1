@@ -33,7 +33,8 @@ class SizeConst {
   static double h15 = SizeUtil.setHeight(15);
   static double h12 = SizeUtil.setHeight(12);
   static double h10 = SizeUtil.setHeight(10);
-  static double h8 = SizeUtil.setHeight(18);
+  static double h8 = SizeUtil.setHeight(8);
+  static double h7 = SizeUtil.setHeight(7);
   static double h6 = SizeUtil.setHeight(6);
   static double h5 = SizeUtil.setHeight(5);
   static double h4 = SizeUtil.setHeight(4);
@@ -73,6 +74,7 @@ class SizeConst {
   static double w12 = SizeUtil.setWidth(12);
   static double w32 = SizeUtil.setWidth(32);
   static double w30 = SizeUtil.setWidth(30);
+  static double w1 = SizeUtil.setWidth(1);
 
   //use for  fontSize
   static double size8 = SizeUtil.setFontText(8);

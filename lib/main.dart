@@ -5,7 +5,7 @@ import 'home/home.dart';
 import 'home2/home2.dart';
 import 'home3/home3.dart';
 import 'home4/home4.dart';
-import 'home6_hung_0712/home_screen.dart';
+import 'home5_duc_0712/home5_view.dart';
 
 void main() {
   runApp(
@@ -20,14 +20,14 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return
       ScreenUtilInit(
-        designSize: Size(360, 712),
+        designSize: Size(392.72727272727275, 834.9090909090909),
           builder: ()=> MaterialApp(
             debugShowCheckedModeBanner: false,
             title: 'Flutter Demo',
             theme: ThemeData(
               primarySwatch: Colors.blue,
             ),
-            home:  HomeSceen6(),
+            home:  Home5View(),
           )
 
       );
