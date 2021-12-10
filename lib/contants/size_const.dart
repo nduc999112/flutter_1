@@ -140,6 +140,7 @@ class SizeConst {
 
   //add radius
   static double r25 = SizeUtil.setRadius(25);
+  static double r50 = SizeUtil.setRadius(50);
   static double r75 = SizeUtil.setRadius(75);
   static double r20 = SizeUtil.setRadius(20);
   static double r10 = SizeUtil.setRadius(10);
