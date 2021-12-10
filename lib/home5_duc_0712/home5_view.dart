@@ -107,10 +107,10 @@ class _Home5ViewState extends State<Home5View> {
                               child: Column(
                                 children: [
                                   Flexible(
-                                    flex:1,
+                                    flex:2,
                                       child: Text('${info?.price}',style: TextStyle(color: Color(0xffea5634),fontSize: SizeConst.size18,fontWeight: FontWeight.bold),)),
                                   Flexible(
-                                      flex:2,
+                                      flex:1,
                                       child: Text('Số dư tài khoản',style: TextStyle(fontSize: SizeConst.size13),))
                                 ],
                               ),
@@ -131,10 +131,10 @@ class _Home5ViewState extends State<Home5View> {
                               child: Column(
                                 children: [
                                   Flexible(
-                                      flex:1,
+                                      flex:2,
                                       child: Text('${info?.price1}',style: TextStyle(color: Color(0xffea5634),fontSize: SizeConst.size18,fontWeight: FontWeight.bold),)),
                                   Flexible(
-                                      flex: 2,
+                                      flex: 1,
                                       child: Text('Số dư đóng băng',style: TextStyle(fontSize: SizeConst.size13),))
                                 ],
                               ),
@@ -155,10 +155,10 @@ class _Home5ViewState extends State<Home5View> {
                               child: Column(
                                 children: [
                                   Flexible(
-                                      flex:1,
+                                      flex:2,
                                       child: Text('${info?.price2}',style: TextStyle(color: Color(0xffea5634),fontSize: SizeConst.size18,fontWeight: FontWeight.bold),)),
                                   Flexible(
-                                    flex: 2,
+                                    flex: 1,
                                       child: Text('Số dư khả dụng',style: TextStyle(fontSize: SizeConst.size13),))
                                 ],
                               ),
