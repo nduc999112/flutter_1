@@ -3,6 +3,7 @@ import 'package:flutter_1/utils/size_utils.dart';
 class SizeConst {
   //add height
   static double h320 = SizeUtil.setHeight(320);
+  static double h300 = SizeUtil.setHeight(300);
   static double h280 = SizeUtil.setHeight(280);
   static double h250 = SizeUtil.setHeight(250);
   static double h220 = SizeUtil.setHeight(220);

@@ -16,7 +16,6 @@ class _Home9ViewState extends State<Home9View> {
   List<String> _locations = ['Tiền mặt', 'Thẻ ATM',]; // Option 2
   String ?_selectedLocation; // Option 2
   String ?selectState;
-
   List<String> state = ['Trạng thái1', 'Trạng thái 2',];
   List<History> ?historys;
 
