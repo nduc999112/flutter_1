@@ -10,6 +10,7 @@ import 'home3/home3.dart';
 import 'home4_hung/home4.dart';
 import 'home5_duc_0712/home5_view.dart';
 import 'home8_hung_0912/home_Screen.dart';
+import 'home9_duc/home9_view.dart';
 
 void main() {
   runApp(
@@ -31,7 +32,7 @@ class MyApp extends StatelessWidget {
             theme: ThemeData(
               primarySwatch: Colors.blue,
             ),
-            home:  HomeSceen6(),
+            home:  HomeScreen10(),
           )
 
       );

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_1/contants/app_consttans.dart';
 import 'package:flutter_1/contants/size_const.dart';
 import 'package:intl/intl.dart';
 
@@ -11,6 +12,8 @@ class HomeSceen6 extends StatefulWidget {
 
 class _HomeSceen6State extends State<HomeSceen6> {
   List<Model1> listData =[];
+  String ?selectState;
+  List<String> state = ['Trạng thái1', 'Trạng thái 2',];
   @override
   void initState() {
   listData = [
@@ -123,7 +126,7 @@ class _HomeSceen6State extends State<HomeSceen6> {
         children: [
           Container(
               width: double.maxFinite,
-              height: SizeConst.h200,
+              height: SizeConst.h220,
               child: Column(
                 children: <Widget>[
                   Padding(
@@ -275,89 +278,73 @@ class _HomeSceen6State extends State<HomeSceen6> {
                       ),
                     ),
                   ),
-                  SizedBox(height: SizeConst.h5,),
-                  Container(
-                    child: Padding(
-                      padding: const EdgeInsets.only(left: 10, right: 10),
-                      child: Row(
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          Expanded(
-                            flex: 1,
-                            child: Container(
-                              height: SizeConst.h40,
-                              width: double.maxFinite,
-                              child: TextField(
-                                style: TextStyle(
-                                  height: 1,
+                  SizedBox(height: 5,),
+                  Expanded(
+                        child:Padding(
+                          padding: const EdgeInsets.only(left: 10, right: 10),
+                          child: AppConstant.dropdownField(
+                              title: 'Trạng thái đơn hàng',
+                              list: state,
+                              valueselect: selectState,
+                              function: (value){
+                                setState(() {
+                                  selectState=value;
+                                });
+                              }
+                          ),
+                        ),
+                    ),
+                  SizedBox(height: 5,),
+
+                  Padding(
+                    padding: const EdgeInsets.only(bottom: 10),
+                    child: Container(
+                      child: Padding(
+                        padding: const EdgeInsets.only(left: 10, right: 10),
+                        child: Row(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            Expanded(
+                              flex: 1,
+                              child: InkWell(
+                                child: Container(
+                                  height: SizeConst.h40,
+                                  decoration: BoxDecoration(
+                                    color: Color(0xffd4614e),
+                                  ),
+                                  child: Center(child: Text('Tìm kiếm', style: TextStyle(color: Colors.white),)),
                                 ),
-                                enabled: false,
-                                decoration: InputDecoration(
-                                    border: OutlineInputBorder(
-                                      borderRadius: BorderRadius.circular(5),
-                                    ),
-                                    enabledBorder: OutlineInputBorder(
-                                      borderSide: BorderSide(color: Color(0xffa6a6a6)),
-                                    ),
-                                    filled: true,
-                                    contentPadding: EdgeInsets.only(left: 10),
-                                    hintText: 'Trạng thái đơn hàng ',
-                                    hintStyle: TextStyle(color: Color(0xffcacaca), fontSize: 15),
-                                    fillColor: Colors.white70),
                               ),
                             ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                  SizedBox(height: SizeConst.h5,),
-                  Container(
-                    child: Padding(
-                      padding: const EdgeInsets.only(left: 10, right: 10),
-                      child: Row(
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          Expanded(
-                            flex: 1,
-                            child: InkWell(
+                            SizedBox(width: SizeConst.w10,),
+                            Expanded(
+                              flex: 1,
                               child: Container(
                                 height: SizeConst.h40,
-                                decoration: BoxDecoration(
-                                  color: Color(0xffd4614e),
+                                width: double.maxFinite,
+                                child: TextField(
+                                  style: TextStyle(
+                                    height: 1,
+                                  ),
+                                  enabled: false,
+                                  decoration: InputDecoration(
+                                      border: OutlineInputBorder(
+                                        borderRadius: BorderRadius.circular(1),
+                                      ),
+                                      enabledBorder: OutlineInputBorder(
+                                        borderSide: BorderSide(color: Color(0xffa6a6a6)),
+                                      ),
+                                      filled: true,
+                                      contentPadding: EdgeInsets.only(left: 30),
+                                      hintText: 'Đóng nâng cao',
+                                      hintStyle: TextStyle(color: Color(0xffcacaca), fontSize: 15),
+                                      fillColor: Colors.white70),
                                 ),
-                                child: Center(child: Text('Tìm kiếm', style: TextStyle(color: Colors.white),)),
                               ),
                             ),
-                          ),
-                          SizedBox(width: SizeConst.w10,),
-                          Expanded(
-                            flex: 1,
-                            child: Container(
-                              height: SizeConst.h40,
-                              width: double.maxFinite,
-                              child: TextField(
-                                style: TextStyle(
-                                  height: 1,
-                                ),
-                                enabled: false,
-                                decoration: InputDecoration(
-                                    border: OutlineInputBorder(
-                                      borderRadius: BorderRadius.circular(1),
-                                    ),
-                                    enabledBorder: OutlineInputBorder(
-                                      borderSide: BorderSide(color: Color(0xffa6a6a6)),
-                                    ),
-                                    filled: true,
-                                    contentPadding: EdgeInsets.only(left: 30),
-                                    hintText: 'Đóng nâng cao',
-                                    hintStyle: TextStyle(color: Color(0xffcacaca), fontSize: 15),
-                                    fillColor: Colors.white70),
-                              ),
-                            ),
-                          ),
 
-                        ],
+                          ],
+                        ),
                       ),
                     ),
                   ),
