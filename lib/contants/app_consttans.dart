@@ -60,6 +60,19 @@ class AppConstant{
       ),
     );
   }
+  static Widget Textform({String ?title}){
+    return Row(
+      children: [
+        TextFormField(
+          decoration: const InputDecoration(
+
+            border: UnderlineInputBorder(),
+
+          ),
+        ),
+      ],
+    );
+}
   static Widget dropdownField({String ?title,String ? valueselect,List<dynamic> ?list,Function ?function}){
     return Center(
       child: InputDecorator(

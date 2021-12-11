@@ -3,7 +3,6 @@ import 'package:flutter_1/contants/app_consttans.dart';
 import 'package:flutter_1/contants/size_const.dart';
 import 'package:intl/intl.dart';
 class HomeScreen10 extends StatefulWidget {
-  const HomeScreen10({Key? key}) : super(key: key);
 
   @override
   _HomeScreen10State createState() => _HomeScreen10State();
