@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_1/contants/size_const.dart';
+import 'package:intl/intl.dart';
 
 import 'model1.dart';
 class HomeSceen6 extends StatefulWidget {
@@ -76,6 +77,38 @@ class _HomeSceen6State extends State<HomeSceen6> {
   ];
     super.initState();
   }
+  DateTime selectedDate = DateTime.now();
+  Future<void> _selectDate(BuildContext context) async {
+    final DateTime? picked = await showDatePicker(
+        context: context,
+        initialDate: selectedDate,
+        firstDate: DateTime(2015, 8),
+        lastDate: DateTime(2101));
+    if (picked != null && picked != selectedDate)
+      setState(() {
+        selectedDate = picked;
+        String formattedDate = DateFormat('yyyy-MM-dd').format(selectedDate);
+        edtDate!.text=formattedDate;
+
+      });
+  }
+  DateTime StartDate = DateTime.now();
+  Future<void> _StartDate(BuildContext context) async {
+    final DateTime? picked = await showDatePicker(
+        context: context,
+        initialDate: selectedDate,
+        firstDate: DateTime(2015, 8),
+        lastDate: DateTime(2101));
+    if (picked != null && picked != selectedDate)
+      setState(() {
+        selectedDate = picked;
+        String formattedDate = DateFormat('yyyy-MM-dd').format(selectedDate);
+        startDate!.text=formattedDate;
+
+      });
+  }
+  TextEditingController? edtDate=TextEditingController();
+  TextEditingController? startDate=TextEditingController();
   @override
   Widget build(BuildContext context) {
     print('${MediaQuery.of(context).size.width}');
@@ -169,6 +202,7 @@ class _HomeSceen6State extends State<HomeSceen6> {
                               height: SizeConst.h40,
                               width: double.maxFinite,
                               child: TextField(
+                                controller: startDate,
                                 style: TextStyle(
                                   height: 1,
                                 ),
@@ -189,9 +223,14 @@ class _HomeSceen6State extends State<HomeSceen6> {
                             ),
                           ),
                           SizedBox(width: SizeConst.w4,),
-                          Expanded(
-                            flex: 1,
-                            child: Icon(Icons.calendar_today)
+                          InkWell(
+                              onTap: (){
+                                _StartDate(context);
+                              },
+                            child: Expanded(
+                              flex: 1,
+                              child: Icon(Icons.calendar_today, color: Colors.red)
+                            ),
                           ),
                           SizedBox(width: SizeConst.w10,),
                           Expanded(
@@ -200,6 +239,7 @@ class _HomeSceen6State extends State<HomeSceen6> {
                               height: SizeConst.h40,
                               width: double.maxFinite,
                               child: TextField(
+                                controller: edtDate,
                                 style: TextStyle(
                                   height: 1,
                                 ),
@@ -221,12 +261,13 @@ class _HomeSceen6State extends State<HomeSceen6> {
                             ),
                           ),
                           SizedBox(width: SizeConst.w4,),
-                          Expanded(
-                            flex: 1,
-                            child: Container(
-                              height: SizeConst.h40,
-                              width: double.maxFinite,
-                              child: Icon(Icons.calendar_today)
+                          InkWell(
+                            onTap: (){
+                              _selectDate(context);
+                            },
+                            child: Expanded(
+                                flex: 1,
+                                child: Icon(Icons.calendar_today, color: Colors.red)
                             ),
                           ),
 
@@ -332,12 +373,12 @@ class _HomeSceen6State extends State<HomeSceen6> {
                     return Padding(
                       padding: const EdgeInsets.all(10),
                       child: Container(
-                        height: SizeConst.h280,
+                        height: SizeConst.h300,
                         width: double.maxFinite,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10), color: Colors.white),
                         child: Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 8),
+                          padding: const EdgeInsets.only(left: 10,right: 10,top: 12, bottom: 12),
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
@@ -360,7 +401,10 @@ class _HomeSceen6State extends State<HomeSceen6> {
                                       ),
                                       borderRadius: BorderRadius.circular(5)
                                     ),
-                                      child: Text("${listData[index].dh}")),
+                                      child: Padding(
+                                        padding: const EdgeInsets.symmetric(horizontal: 8),
+                                        child: Text("${listData[index].dh}"),
+                                      )),
                                 ],
                               ),
                               Row(
