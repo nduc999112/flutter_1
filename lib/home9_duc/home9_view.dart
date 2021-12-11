@@ -227,22 +227,31 @@ class _Home9ViewState extends State<Home9View> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Container(
-                    width: SizeConst.w180,
-                    color: Color(0xffe95433),
-                   child: Padding(
-                     padding:  EdgeInsets.all(10.0),
-                     child: Center(child: Text('Tìm kiếm',style: TextStyle(color: Colors.white),)),
-                   )),
-                  Container(
-                      decoration: BoxDecoration(
-                          border: Border.all(color: Colors.grey)
-                      ),
+                  Flexible(
+                    flex:1,
+                    child: Container(
                       width: SizeConst.w180,
-                      child: Padding(
-                        padding:  EdgeInsets.all(10.0),
-                        child: Center(child: Text('Đóng nâng cao',style: TextStyle(color: Colors.grey),)),
-                      )),
+                      color: Color(0xffe95433),
+                     child: Padding(
+                       padding:  EdgeInsets.all(10.0),
+                       child: Center(child: Text('Tìm kiếm',style: TextStyle(color: Colors.white),)),
+                     )),
+                  ),
+                  SizedBox(
+                    width: SizeConst.w20,
+                  ),
+                  Flexible(
+                    flex:1,
+                    child: Container(
+                        decoration: BoxDecoration(
+                            border: Border.all(color: Colors.grey)
+                        ),
+                        width: SizeConst.w180,
+                        child: Padding(
+                          padding:  EdgeInsets.all(10.0),
+                          child: Center(child: Text('Đóng nâng cao',style: TextStyle(color: Colors.grey),)),
+                        )),
+                  ),
 
                 ],
               ),
@@ -265,8 +274,14 @@ class _Home9ViewState extends State<Home9View> {
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              Text('Mã giao dịch',style: TextStyle(color: Color(0xffdb7f34),fontSize: SizeConst.size17,fontWeight: FontWeight.bold),),
-                              Text('${historys![int].id}',style: TextStyle(color: Color(0xffdb7f34),fontSize: SizeConst.size17,fontWeight: FontWeight.bold),)
+                              Flexible(
+                                  flex:1,
+                                  fit: FlexFit.loose,
+                                  child: Text('Mã giao dịch',style: TextStyle(color: Color(0xffdb7f34),fontSize: SizeConst.size17,fontWeight: FontWeight.bold),)),
+                              Flexible(
+                                  flex:1,
+                                  fit: FlexFit.loose,
+                                  child: Text('${historys![int].id}',style: TextStyle(color: Color(0xffdb7f34),fontSize: SizeConst.size17,fontWeight: FontWeight.bold),))
                             ],
                           ),
                           SizedBox(
@@ -275,8 +290,14 @@ class _Home9ViewState extends State<Home9View> {
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              Text('Mã giao dịch',style: TextStyle(),),
-                              Text('${historys![int].date}',style: TextStyle(),)
+                              Flexible(
+                                  flex:1,
+                                  fit: FlexFit.loose,
+                                  child: Text('Mã giao dịch',style: TextStyle(),)),
+                              Flexible(
+                                  flex:1,
+                                  fit: FlexFit.loose,
+                                  child: Text('${historys![int].date}',style: TextStyle(),))
                             ],
                           ),
                           SizedBox(
@@ -285,8 +306,14 @@ class _Home9ViewState extends State<Home9View> {
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              Text('Số tiền',style: TextStyle(),),
-                              Text('${historys![int].money}',style: TextStyle(color: Color(0xffc85043),fontWeight: FontWeight.bold,fontSize: SizeConst.size17),)
+                              Flexible(
+                                  flex:1,
+                                  fit: FlexFit.loose,
+                                  child: Text('Số tiền',style: TextStyle(),)),
+                              Flexible(
+                                  flex:1,
+                                  fit: FlexFit.loose,
+                                  child: Text('${historys![int].money}',style: TextStyle(color: Color(0xffc85043),fontWeight: FontWeight.bold,fontSize: SizeConst.size17),))
                             ],
                           ),
                           SizedBox(
@@ -295,8 +322,14 @@ class _Home9ViewState extends State<Home9View> {
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              Text('Số dư sau giao dịch',style: TextStyle(),),
-                              Text('${historys![int].money}',style: TextStyle(color:Colors.black,fontWeight: FontWeight.bold,fontSize: SizeConst.size17),)
+                              Flexible(
+                                  flex:1,
+                                  fit: FlexFit.loose,
+                                  child: Text('Số dư sau giao dịch',style: TextStyle(),)),
+                              Flexible(
+                                  flex:1,
+                                  fit: FlexFit.loose,
+                                  child: Text('${historys![int].money}',style: TextStyle(color:Colors.black,fontWeight: FontWeight.bold,fontSize: SizeConst.size17),))
                             ],
                           ),
                           SizedBox(
@@ -305,8 +338,14 @@ class _Home9ViewState extends State<Home9View> {
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                                Text('Loại giao dịch',style: TextStyle(),),
-                              Text('${historys![int].type}',style: TextStyle(color:Color(0xff5089aa),fontSize: SizeConst.size17),)
+                                Flexible(
+                                    flex:1,
+                                    fit: FlexFit.loose,
+                                    child: Text('Loại giao dịch',style: TextStyle(),)),
+                              Flexible(
+                                  flex:1,
+                                  fit: FlexFit.loose,
+                                  child: Text('${historys![int].type}',style: TextStyle(color:Color(0xff5089aa),fontSize: SizeConst.size17),))
                             ],
                           ),
                           SizedBox(
@@ -315,16 +354,23 @@ class _Home9ViewState extends State<Home9View> {
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              Text('Mã đơn',style: TextStyle(),),
-                              Container(
-                                  decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(10),
-                                    border: Border.all(color: Color(0xffdb7f34),width: 2)
-                                  ),
-                                  child: Padding(
-                                    padding:  EdgeInsets.symmetric(horizontal: 3,vertical: 3),
-                                    child: Text('${historys![int].code}',style: TextStyle(color: Color(0xffdb7f34),fontSize: SizeConst.size17),),
-                                  ))
+                              Flexible(
+                                  flex:1,
+                                  fit: FlexFit.loose,
+                                  child: Text('Mã đơn',style: TextStyle(),)),
+                              Flexible(
+                                flex:1,
+                                fit: FlexFit.loose,
+                                child: Container(
+                                    decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(10),
+                                      border: Border.all(color: Color(0xffdb7f34),width: 2)
+                                    ),
+                                    child: Padding(
+                                      padding:  EdgeInsets.symmetric(horizontal: 3,vertical: 3),
+                                      child: Text('${historys![int].code}',style: TextStyle(color: Color(0xffdb7f34),fontSize: SizeConst.size17),),
+                                    )),
+                              )
                             ],
                           ),
                           SizedBox(
@@ -333,8 +379,14 @@ class _Home9ViewState extends State<Home9View> {
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              Text('Nội dung',style: TextStyle(),),
-                              Text('${historys![int].content}',style: TextStyle())
+                              Flexible(
+                                  flex:1,
+                                  fit: FlexFit.loose,
+                                  child: Text('Nội dung',style: TextStyle(),)),
+                              Flexible(
+                                  flex:1,
+                                  fit: FlexFit.loose,
+                                  child: Text('${historys![int].content}',style: TextStyle()))
                             ],
                           ),
                           SizedBox(
@@ -343,16 +395,23 @@ class _Home9ViewState extends State<Home9View> {
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              Text('Trạng thái',style: TextStyle(),),
-                              Container(
-                                  decoration: BoxDecoration(
-                                    color: Color(0xff0ba060),
-                                    borderRadius: BorderRadius.circular(5),
-                                  ),
-                                  child: Padding(
-                                    padding:  EdgeInsets.all(8.0),
-                                    child: Text('${historys![int].status}',style: TextStyle(color:Colors.white),),
-                                  ))
+                              Flexible(
+                                  flex:1,
+                                  fit: FlexFit.loose,
+                                  child: Text('Trạng thái',style: TextStyle(),)),
+                              Flexible(
+                                flex:1,
+                                fit: FlexFit.loose,
+                                child: Container(
+                                    decoration: BoxDecoration(
+                                      color: Color(0xff0ba060),
+                                      borderRadius: BorderRadius.circular(5),
+                                    ),
+                                    child: Padding(
+                                      padding:  EdgeInsets.all(8.0),
+                                      child: Text('${historys![int].status}',style: TextStyle(color:Colors.white),),
+                                    )),
+                              )
                             ],
                           ),
                         ],
