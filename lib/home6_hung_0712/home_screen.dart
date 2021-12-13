@@ -360,7 +360,7 @@ class _HomeSceen6State extends State<HomeSceen6> {
                     return Padding(
                       padding: const EdgeInsets.all(10),
                       child: Container(
-                        height: SizeConst.h300,
+                        height: SizeConst.h320,
                         width: double.maxFinite,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10), color: Colors.white),

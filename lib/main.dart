@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_1/home10_hung1012/home_screen.dart';
-import 'package:flutter_1/home11_hung/login.dart';
+
 import 'package:flutter_1/home6_hung_0712/home_screen.dart';
 import 'package:flutter_1/home7/home7_view.dart';
 import 'package:flutter_1/view/dashboard/view.dart';
+
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'home/home.dart';
@@ -34,7 +35,7 @@ class MyApp extends StatelessWidget {
             theme: ThemeData(
               primarySwatch: Colors.blue,
             ),
-            home:  MyStatefulWidget(),
+            home:  Dashboard(),
           )
 
       );
