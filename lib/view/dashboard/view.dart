@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_1/contants/color_const.dart';
+import 'package:flutter_1/home2/home2.dart';
 
 
 
@@ -8,10 +9,10 @@ class Dashboard extends StatefulWidget {
   const Dashboard({Key? key}) : super(key: key);
 
   @override
-  State<Dashboard> createState() => _MyStatefulWidgetState();
+  State<Dashboard> createState() => _DashboardState();
 }
 
-class _MyStatefulWidgetState extends State<Dashboard> {
+class _DashboardState extends State<Dashboard> {
   int _selectedIndex = 0;
   static const TextStyle optionStyle =
   TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
@@ -21,7 +22,7 @@ class _MyStatefulWidgetState extends State<Dashboard> {
       style: optionStyle,
     ),
     Text(
-      'Index 1: Business',
+      'Index 0: Home',
       style: optionStyle,
     ),
     Text(

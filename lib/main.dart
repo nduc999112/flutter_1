@@ -8,6 +8,7 @@ import 'package:flutter_1/view/dashboard/view.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'home/home.dart';
+import 'home11_hung/login.dart';
 import 'home2/home2.dart';
 import 'home3/home3.dart';
 import 'home4_hung/home4.dart';
