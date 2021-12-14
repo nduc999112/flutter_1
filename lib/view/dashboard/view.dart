@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_1/contants/color_const.dart';
 import 'package:flutter_1/home2/home2.dart';
+import 'package:flutter_1/home5_duc_0712/home5_view.dart';
 
 
 
@@ -21,18 +22,12 @@ class _DashboardState extends State<Dashboard> {
       'Index 0: Home',
       style: optionStyle,
     ),
-    Text(
-      'Index 0: Home',
-      style: optionStyle,
-    ),
+    HomeView2(),
     Text(
       'Index 2: School',
       style: optionStyle,
     ),
-    Text(
-      'Index 3: Settings',
-      style: optionStyle,
-    ),
+    Home5View(),
   ];
 
   void _onItemTapped(int index) {
@@ -44,9 +39,6 @@ class _DashboardState extends State<Dashboard> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('BottomNavigationBar Sample'),
-      ),
       body: Center(
         child: _widgetOptions.elementAt(_selectedIndex),
       ),
@@ -58,18 +50,18 @@ class _DashboardState extends State<Dashboard> {
             // backgroundColor: ColorConst.colorOrange,
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.business),
-            label: 'Business',
+            icon: Icon(Icons.shopping_cart),
+            label: 'Giỏ hàng',
             // backgroundColor: ColorConst.colorOrange,
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.school),
-            label: 'Business',
+            icon: Icon(Icons.notifications),
+            label: 'Thông báo',
             // backgroundColor: ColorConst.colorOrange,
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.settings),
-            label: 'Settings',
+            icon: Icon(Icons.person),
+            label: 'Cá nhân',
             // backgroundColor: ColorConst.colorOrange,
           ),
         ],

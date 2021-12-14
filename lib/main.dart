@@ -4,6 +4,7 @@ import 'package:flutter_1/home10_hung1012/home_screen.dart';
 import 'package:flutter_1/home6_hung_0712/home_screen.dart';
 import 'package:flutter_1/home7/home7_view.dart';
 import 'package:flutter_1/view/dashboard/view.dart';
+import 'package:flutter_1/view/pay/viewpay.dart';
 
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -36,7 +37,7 @@ class MyApp extends StatelessWidget {
             theme: ThemeData(
               primarySwatch: Colors.blue,
             ),
-            home:  Dashboard(),
+            home:  ViewPay(),
           )
 
       );
