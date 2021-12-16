@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_1/contants/color_const.dart';
 import 'package:flutter_1/home2/home2.dart';
+import 'package:flutter_1/home5_duc_0712/home5_view.dart';
+import 'package:flutter_1/view/home/home_ui.dart';
+import 'package:flutter_1/view/notifications/notifit_Home.dart';
 
 
 
@@ -18,21 +21,10 @@ class _DashboardState extends State<Dashboard> {
   TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static const List<Widget> _widgetOptions = <Widget>[
     HomeUi(),
-    Text(
-      'Index 0: Home',
-      style: optionStyle,
-    ),
     HomeView2(),
-    Text(
-      'Index 2: School',
-      style: optionStyle,
-    ),
-    Home5View(),
     NotifitUi(),
-    Text(
-      'Index 3: Settings',
-      style: optionStyle,
-    ),
+    Home5View(),
+
   ];
 
   void _onItemTapped(int index) {

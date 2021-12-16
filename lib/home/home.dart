@@ -243,7 +243,7 @@ class _ViewHomeState extends State<ViewHome> {
                                                   ),
                                                   SizedBox(width: SizeConst.w32,),
                                                   Container(
-                                                    height: SizeConst.h30,
+                                                    height: SizeConst.h35,
                                                     width: SizeConst.h120,
                                                     decoration: BoxDecoration(
                                                         color: Color(0xff00a65b),

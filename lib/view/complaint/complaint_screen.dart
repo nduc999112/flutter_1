@@ -212,7 +212,7 @@ class _ComplaintScreenState extends State<ComplaintScreen> {
                                           Text('Mã KN: 5578686', style: TextStyle(color: Color(0xfff67b5e)),),
                                           SizedBox(width: SizeConst.w32,),
                                           Container(
-                                            height: SizeConst.h30,
+                                            height: SizeConst.h35,
                                             width: SizeConst.w90,
                                             decoration: BoxDecoration(
                                               color: Color(0xff00a65a),
