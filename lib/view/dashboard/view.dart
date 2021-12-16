@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_1/contants/color_const.dart';
 import 'package:flutter_1/home2/home2.dart';
-import 'package:flutter_1/home5_duc_0712/home5_view.dart';
 
 
 
@@ -18,6 +17,7 @@ class _DashboardState extends State<Dashboard> {
   static const TextStyle optionStyle =
   TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static const List<Widget> _widgetOptions = <Widget>[
+    HomeUi(),
     Text(
       'Index 0: Home',
       style: optionStyle,
@@ -28,6 +28,11 @@ class _DashboardState extends State<Dashboard> {
       style: optionStyle,
     ),
     Home5View(),
+    NotifitUi(),
+    Text(
+      'Index 3: Settings',
+      style: optionStyle,
+    ),
   ];
 
   void _onItemTapped(int index) {

@@ -1,3 +1,5 @@
+
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -188,7 +190,7 @@ class _HomeView3State extends State<HomeView3>  with SingleTickerProviderStateMi
       initialIndex: 1,
       length: 3,
       child: Scaffold(
-        appBar: _appbar(),
+        appBar: _appbar(context),
         body: Column(
           children: [
             TabBar(
@@ -462,13 +464,17 @@ class _HomeView3State extends State<HomeView3>  with SingleTickerProviderStateMi
 
   }
 }
-PreferredSizeWidget _appbar() {
+PreferredSizeWidget _appbar(BuildContext context) {
   return AppBar(
     elevation: 0,
     backgroundColor: Color(0xffec846b),
     leading: Padding(
       padding: const EdgeInsets.only(left: 3),
-      child: Icon(Icons.arrow_back_ios),
+      child: InkWell(
+        onTap: (){
+          Navigator.pop(context);
+        },
+          child: Icon(Icons.arrow_back_ios)),
     ),
     centerTitle: true,
     title: Padding(
