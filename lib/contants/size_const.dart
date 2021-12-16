@@ -2,9 +2,13 @@ import 'package:flutter_1/utils/size_utils.dart';
 
 class SizeConst {
   //add height
+  static double h600 = SizeUtil.setHeight(600);
+  static double h400 = SizeUtil.setHeight(400);
+  static double h350 = SizeUtil.setHeight(350);
   static double h320 = SizeUtil.setHeight(320);
   static double h300 = SizeUtil.setHeight(300);
   static double h280 = SizeUtil.setHeight(280);
+  static double h270 = SizeUtil.setHeight(270);
   static double h250 = SizeUtil.setHeight(250);
   static double h220 = SizeUtil.setHeight(220);
   static double h200 = SizeUtil.setHeight(200);
@@ -27,6 +31,7 @@ class SizeConst {
   static double h36 = SizeUtil.setHeight(36);
   static double h33 = SizeUtil.setHeight(33);
   static double h32 = SizeUtil.setHeight(32);
+  static double h30 = SizeUtil.setHeight(30);
   static double h24 = SizeUtil.setHeight(24);
   static double h20 = SizeUtil.setHeight(20);
   static double h18 = SizeUtil.setHeight(18);
@@ -60,8 +65,10 @@ class SizeConst {
   static double w260 = SizeUtil.setWidth(260);
   static double w250 = SizeUtil.setWidth(240);
   static double w364 = SizeUtil.setWidth(364);
+  static double w130 = SizeUtil.setWidth(130);
   static double w40 = SizeUtil.setWidth(40);
   static double w96 = SizeUtil.setWidth(96);
+  static double w80 = SizeUtil.setWidth(80);
   static double w70 = SizeUtil.setWidth(70);
   static double w50 = SizeUtil.setWidth(50);
   static double w90 = SizeUtil.setWidth(90);

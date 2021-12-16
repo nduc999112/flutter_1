@@ -1,12 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_1/contants/color_const.dart';
-import 'package:flutter_1/home2/home2.dart';
-
-
-
+import 'package:flutter_1/view/home/home_ui.dart';
+import 'package:flutter_1/view/notifications/notifit_Home.dart';
 
 class Dashboard extends StatefulWidget {
-  const Dashboard({Key? key}) : super(key: key);
 
   @override
   State<Dashboard> createState() => _DashboardState();
@@ -17,18 +14,12 @@ class _DashboardState extends State<Dashboard> {
   static const TextStyle optionStyle =
   TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static const List<Widget> _widgetOptions = <Widget>[
-    Text(
-      'Index 0: Home',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 0: Home',
-      style: optionStyle,
-    ),
+    HomeUi(),
     Text(
       'Index 2: School',
       style: optionStyle,
     ),
+    NotifitUi(),
     Text(
       'Index 3: Settings',
       style: optionStyle,
@@ -44,9 +35,6 @@ class _DashboardState extends State<Dashboard> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('BottomNavigationBar Sample'),
-      ),
       body: Center(
         child: _widgetOptions.elementAt(_selectedIndex),
       ),

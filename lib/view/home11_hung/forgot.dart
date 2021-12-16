@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_1/contants/size_const.dart';
-import 'package:flutter_1/home11_hung/login.dart';
-import 'package:flutter_1/home11_hung/sign_in.dart';
 import 'package:flutter_1/utils/image.dart';
+import 'package:flutter_1/view/home11_hung/login.dart';
 class Forgot extends StatefulWidget {
   const Forgot({Key? key}) : super(key: key);
 

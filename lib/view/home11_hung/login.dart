@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_1/contants/app_consttans.dart';
 import 'package:flutter_1/contants/size_const.dart';
-import 'package:flutter_1/home11_hung/forgot.dart';
-import 'package:flutter_1/home11_hung/sign_in.dart';
 import 'package:flutter_1/utils/image.dart';
+import 'package:flutter_1/view/home11_hung/sign_in.dart';
+
+import 'forgot.dart';
 
 class Home11Screen extends StatefulWidget {
   const Home11Screen({Key? key}) : super(key: key);

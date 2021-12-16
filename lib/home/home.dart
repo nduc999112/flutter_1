@@ -2,6 +2,7 @@ import 'dart:core';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_1/contants/size_const.dart';
 
 import 'model.dart';
 
@@ -27,7 +28,7 @@ class _ViewHomeState extends State<ViewHome> {
       model(
           image: 'https://cf.shopee.vn/file/9cdd067cb7fe19ade918db0a503287b9',
           id: 'NP45643567',
-          status: 'Đang vận chuyển TQ-VN',
+          status: 'Đã giao hàng',
           shopname: '越南店越南店越南店',
           total: '3/3/-',
           kg: '4.2',
@@ -39,31 +40,7 @@ class _ViewHomeState extends State<ViewHome> {
       model(
           image: 'https://cf.shopee.vn/file/9cdd067cb7fe19ade918db0a503287b9',
           id: 'NP45643567',
-          status: 'Đang vận chuyển TQ-VN',
-          shopname: '越南店越南店越南店',
-          total: '6/3/-',
-          kg: '8.2',
-          totalmoney: '984.973đ',
-          totalmoney1: '245.973đ',
-          totalmoney2: '665684.973đ',
-          totalmoney3: '884.973đ',
-          totalmone4: '984.973đ'),
-      model(
-          image: 'https://cf.shopee.vn/file/9cdd067cb7fe19ade918db0a503287b9',
-          id: 'NP45643567',
-          status: 'Đang vận chuyển TQ-VN',
-          shopname: '越南店越南店越南店',
-          total: '3/9/-',
-          kg: '9.2',
-          totalmoney: '984.973đ',
-          totalmoney1: '345.973đ',
-          totalmoney2: '965684.973đ',
-          totalmoney3: '984.973đ',
-          totalmone4: '984.973đ'),
-      model(
-          image: 'https://cf.shopee.vn/file/9cdd067cb7fe19ade918db0a503287b9',
-          id: 'NP45643567',
-          status: 'Đang vận chuyển TQ-VN',
+          status: 'Đã giao hàng',
           shopname: '越南店越南店越南店',
           total: '3/3/-',
           kg: '4.2',
@@ -75,7 +52,7 @@ class _ViewHomeState extends State<ViewHome> {
       model(
           image: 'https://cf.shopee.vn/file/9cdd067cb7fe19ade918db0a503287b9',
           id: 'NP45643567',
-          status: 'Đang vận chuyển TQ-VN',
+          status: 'Đã giao hàng',
           shopname: '越南店越南店越南店',
           total: '3/3/-',
           kg: '4.2',
@@ -87,7 +64,7 @@ class _ViewHomeState extends State<ViewHome> {
       model(
           image: 'https://cf.shopee.vn/file/9cdd067cb7fe19ade918db0a503287b9',
           id: 'NP45643567',
-          status: 'Đang vận chuyển TQ-VN',
+          status: 'Đã giao hàng',
           shopname: '越南店越南店越南店',
           total: '3/3/-',
           kg: '4.2',
@@ -99,10 +76,10 @@ class _ViewHomeState extends State<ViewHome> {
       model(
           image: 'https://cf.shopee.vn/file/9cdd067cb7fe19ade918db0a503287b9',
           id: 'NP45643567',
-          status: 'Đang vận chuyển TQ-VN',
+          status: 'Đã giao hàng',
           shopname: '越南店越南店越南店',
-          total: '9/3/-',
-          kg: '9.2',
+          total: '3/3/-',
+          kg: '4.2',
           totalmoney: '984.973đ',
           totalmoney1: '345.973đ',
           totalmoney2: '965684.973đ',
@@ -111,34 +88,58 @@ class _ViewHomeState extends State<ViewHome> {
       model(
           image: 'https://cf.shopee.vn/file/9cdd067cb7fe19ade918db0a503287b9',
           id: 'NP45643567',
-          status: 'Đang vận chuyển TQ-VN',
+          status: 'Đã giao hàng',
           shopname: '越南店越南店越南店',
-          total: '3/9/-',
-          kg: '6.2',
+          total: '3/3/-',
+          kg: '4.2',
           totalmoney: '984.973đ',
-          totalmoney1: '845.973đ',
-          totalmoney2: '565684.973đ',
-          totalmoney3: '384.973đ',
-          totalmone4: '884.973đ'),
+          totalmoney1: '345.973đ',
+          totalmoney2: '965684.973đ',
+          totalmoney3: '984.973đ',
+          totalmone4: '984.973đ'),
       model(
           image: 'https://cf.shopee.vn/file/9cdd067cb7fe19ade918db0a503287b9',
           id: 'NP45643567',
-          status: 'Đang vận chuyển TQ-VN',
+          status: 'Đã giao hàng',
           shopname: '越南店越南店越南店',
-          total: '6/3/-',
-          kg: '46.2',
-          totalmoney: '884.973đ',
-          totalmoney1: '375.973đ',
-          totalmoney2: '765684.973đ',
-          totalmoney3: '884.973đ',
-          totalmone4: '684.973đ'),
+          total: '3/3/-',
+          kg: '4.2',
+          totalmoney: '984.973đ',
+          totalmoney1: '345.973đ',
+          totalmoney2: '965684.973đ',
+          totalmoney3: '984.973đ',
+          totalmone4: '984.973đ'),
       model(
           image: 'https://cf.shopee.vn/file/9cdd067cb7fe19ade918db0a503287b9',
           id: 'NP45643567',
-          status: 'Đang vận chuyển TQ-VN',
+          status: 'Đã giao hàng',
           shopname: '越南店越南店越南店',
-          total: '3/5/-',
-          kg: '4.23',
+          total: '3/3/-',
+          kg: '4.2',
+          totalmoney: '984.973đ',
+          totalmoney1: '345.973đ',
+          totalmoney2: '965684.973đ',
+          totalmoney3: '984.973đ',
+          totalmone4: '984.973đ'),
+      model(
+          image: 'https://cf.shopee.vn/file/9cdd067cb7fe19ade918db0a503287b9',
+          id: 'NP45643567',
+          status: 'Đã giao hàng',
+          shopname: '越南店越南店越南店',
+          total: '3/3/-',
+          kg: '4.2',
+          totalmoney: '984.973đ',
+          totalmoney1: '345.973đ',
+          totalmoney2: '965684.973đ',
+          totalmoney3: '984.973đ',
+          totalmone4: '984.973đ'),
+      model(
+          image: 'https://cf.shopee.vn/file/9cdd067cb7fe19ade918db0a503287b9',
+          id: 'NP45643567',
+          status: 'Đã giao hàng',
+          shopname: '越南店越南店越南店',
+          total: '3/3/-',
+          kg: '4.2',
           totalmoney: '984.973đ',
           totalmoney1: '345.973đ',
           totalmoney2: '965684.973đ',
@@ -196,161 +197,164 @@ class _ViewHomeState extends State<ViewHome> {
                     child: Column(
                       children: [
                         total(),
-                        Container(
-                          child: ListView.builder(
-                            physics: NeverScrollableScrollPhysics(),
-                            shrinkWrap: true,
-                            itemCount: listmode?.length,
-                            itemBuilder: (context, int) {
-                              return Padding(
-                                padding: const EdgeInsets.symmetric(
-                                    horizontal: 16, vertical: 6),
-                                child: Container(
-                                  decoration: BoxDecoration(
-                                    color: Colors.white,
-                                    borderRadius: BorderRadius.circular(10),
-                                  ),
-                                  child: Padding(
-                                    padding: const EdgeInsets.all(16.0),
-                                    child: Column(
-                                      children: [
-                                        Row(
-                                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                          crossAxisAlignment: CrossAxisAlignment.start,
-                                          children: [
-                                            Image.network(
-                                              '${listmode?[int].image}',
-                                              height: 50,
-                                              width: 50,
-                                            ),
-                                            SizedBox(
-                                              width: 20,
-                                            ),
-                                            Column(
-                                              crossAxisAlignment: CrossAxisAlignment.start,
-                                              children: [
-                                                Row(
-                                                  mainAxisSize: MainAxisSize.min,
-                                                  children: [
-                                                    Text(
-                                                      '${listmode?[int].id}',
-                                                      style: TextStyle(
-                                                          color: Color(0xffe88b44),
-                                                          fontWeight: FontWeight.bold,
-                                                          fontSize: 15),
+                        ListView.builder(
+                          physics: NeverScrollableScrollPhysics(),
+                          shrinkWrap: true,
+                          itemCount: listmode?.length,
+                          itemBuilder: (context, int) {
+                            return Padding(
+                              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+                              child: Container(
+                                height: SizeConst.h270,
+                                width: double.infinity,
+                                decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(10),
+                                ),
+                                child: Padding(
+                                  padding: const EdgeInsets.all(16.0),
+                                  child: Column(
+                                    children: [
+                                      Row(
+                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        children: [
+                                          Image.network(
+                                            '${listmode?[int].image}',
+                                            height: 50,
+                                            width: 50,
+                                          ),
+                                          SizedBox(
+                                            width: 20,
+                                          ),
+                                          Column(
+                                            crossAxisAlignment: CrossAxisAlignment.start,
+                                            children: [
+                                              Row(
+                                                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                                children: [
+                                                  Text(
+                                                    '${listmode?[int].id}',
+                                                    style: TextStyle(
+                                                        color: Color(
+                                                            0xffe88b44),
+                                                        fontWeight: FontWeight.bold,
+                                                        fontSize: 15),
+                                                  ),
+                                                  SizedBox(width: SizeConst.w32,),
+                                                  Container(
+                                                    height: SizeConst.h30,
+                                                    width: SizeConst.h120,
+                                                    decoration: BoxDecoration(
+                                                        color: Color(0xff00a65b),
+                                                      borderRadius: BorderRadius.all(Radius.circular(10))
                                                     ),
-                                                    SizedBox(width: 5,),
-                                                    Container(
-                                                      color: Color(0xffee9a11),
-                                                      child: Padding(
-                                                        padding:
-                                                        const EdgeInsets.all(6.0),
-                                                        child: Text(
-                                                          '${listmode?[int].status}',
-                                                          style: TextStyle(
-                                                              color: Colors.white),
-                                                        ),
+                                                    child: Center(
+                                                      child: Text(
+                                                        '${listmode?[int].status}',
+                                                        style: TextStyle(
+                                                            color: Colors.white),
                                                       ),
-                                                    )
-                                                  ],
-                                                ),
-                                                SizedBox(
-                                                  height: 8,
-                                                ),
-                                                Text('Shop: ${listmode?[int].shopname}'),
-                                                SizedBox(
-                                                  height: 8,
-                                                ),
-                                                Row(
-                                                          children: [
-                                                           Row(
-                                                             children: [
-                                                               Text('Số lượng: '),
-                                                               Text('${listmode?[int].total}',style: TextStyle(fontWeight: FontWeight.bold),)
-                                                             ],
-                                                           ),
-                                                            SizedBox(width: 30,),
-                                                            Row(
-                                                              children: [
-                                                                Text('Cân nặng:'),
-                                                                Text('${listmode?[int].kg} kg',style: TextStyle(fontWeight: FontWeight.bold),)
-                                                              ],
-                                                            )
-                                                          ],
-                                                        ),
-                                                SizedBox(
-                                                  height: 10,
-                                                ),
-                                              ],
-                                            )
-                                          ],
-                                        ),
-                                        Row(
-                                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                                  children: [
-                                                    Text('Tiền hàng',style: TextStyle(color: Colors.grey),),
-                                                    SizedBox(
-                                                      width: 50,
                                                     ),
-                                                    Text('${listmode?[int].totalmoney1}')
-                                                  ],
-                                                ),
-                                        Row(
-                                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                                  children: [
-                                                    Text('Tổng các phí',style: TextStyle(color: Colors.grey),),
-                                                    SizedBox(
-                                                      width: 50,
-                                                    ),
-                                                    Text('${listmode?[int].totalmoney2}')
-                                                  ],
-                                                ),
-                                        Row(
-                                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                          children: [
-                                            Text('Tổng giá trị đơn',style: TextStyle(color: Colors.grey),),
-                                            SizedBox(
-                                              width: 50,
-                                            ),
-                                            Text('${listmode?[int].totalmoney3}',style: TextStyle(
-                                              color: Color(0xffc76548),
-                                            ),)
-                                          ],
-                                        ),
-                                        Divider(),
-                                        Row(
-                                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                          children: [
-                                            Text('Đã thanh toán',style: TextStyle(color: Colors.grey),),
-                                            SizedBox(
-                                              width: 50,
-                                            ),
-                                            Text('${listmode?[int].totalmone4}',style: TextStyle(
-                                                            color: Color(0xff2a8157),
-                                                            fontWeight: FontWeight.bold
-                                                          ))
-                                          ],
-                                        ),
-                                        Row(
-                                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                          children: [
-                                            Text('Còn thiếu',style: TextStyle(color: Colors.grey),),
-                                            SizedBox(
-                                              width: 50,
-                                            ),
-                                            Text('${listmode?[int].totalmone4}',style: TextStyle(
-                                                color: Color(0xffb42a2c),
-                                                fontWeight: FontWeight.bold
-                                            ))
-                                          ],
-                                        ),
-                                      ],
-                                    ),
+                                                  )
+                                                ],
+                                              ),
+                                              SizedBox(
+                                                height: 8,
+                                              ),
+                                              Text('Shop: ${listmode?[int].shopname}'),
+                                              SizedBox(
+                                                height: 8,
+                                              ),
+                                              Row(
+                                                        children: [
+                                                         Row(
+                                                           children: [
+                                                             Text('Số lượng: '),
+                                                             Text('${listmode?[int].total}',style: TextStyle(fontWeight: FontWeight.bold),)
+                                                           ],
+                                                         ),
+                                                          SizedBox(width: 30,),
+                                                          Row(
+                                                            children: [
+                                                              Text('Cân nặng:'),
+                                                              Text('${listmode?[int].kg} kg',style: TextStyle(fontWeight: FontWeight.bold),)
+                                                            ],
+                                                          )
+                                                        ],
+                                                      ),
+                                              SizedBox(
+                                                height: 10,
+                                              ),
+                                            ],
+                                          )
+                                        ],
+                                      ),
+                                      Row(
+                                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                                children: [
+                                                  Text('Tiền hàng',style: TextStyle(color: Colors.grey),),
+                                                  SizedBox(
+                                                    width: 50,
+                                                  ),
+                                                  Text('${listmode?[int].totalmoney1}')
+                                                ],
+                                              ),
+                                      Row(
+                                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                                children: [
+                                                  Text('Tổng các phí',style: TextStyle(color: Colors.grey),),
+                                                  SizedBox(
+                                                    width: 50,
+                                                  ),
+                                                  Text('${listmode?[int].totalmoney2}')
+                                                ],
+                                              ),
+                                      Row(
+                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                        children: [
+                                          Text('Tổng giá trị đơn',style: TextStyle(color: Colors.grey),),
+                                          SizedBox(
+                                            width: 50,
+                                          ),
+                                          Text('${listmode?[int].totalmoney3}',style: TextStyle(
+                                            color: Color(0xffc76548),
+                                          ),)
+                                        ],
+                                      ),
+                                      Divider(),
+                                      Row(
+                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                        children: [
+                                          Text('Đã thanh toán',style: TextStyle(color: Colors.grey),),
+                                          SizedBox(
+                                            width: 50,
+                                          ),
+                                          Text('${listmode?[int].totalmone4}',style: TextStyle(
+                                                          color: Color(0xff2a8157),
+                                                          fontWeight: FontWeight.bold
+                                                        ))
+                                        ],
+                                      ),
+                                      Row(
+                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                        children: [
+                                          Text('Còn thiếu',style: TextStyle(color: Colors.grey),),
+                                          SizedBox(
+                                            width: 50,
+                                          ),
+                                          Text('${listmode?[int].totalmone4}',style: TextStyle(
+                                              color: Color(0xffb42a2c),
+                                              fontWeight: FontWeight.bold
+                                          ))
+                                        ],
+                                      ),
+                                    ],
                                   ),
                                 ),
-                              );
-                            },
-                          ),
+                              ),
+                            );
+                          },
                         )
                       ],
                     )),
@@ -398,57 +402,55 @@ class _ViewHomeState extends State<ViewHome> {
   }
 
   Widget searchButton() {
-    return Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 10),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            InkWell(
-              onTap: () {
-                changeColor();
-              },
-              child: Container(
-                decoration: BoxDecoration(
-                    border: Border.all(
-                        color:
-                            click == true ? Colors.transparent : Colors.grey),
-                    color: click == true ? Color(0xffe95433) : Colors.white),
-                child: Padding(
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 50, vertical: 4),
-                  child: Text(
-                    'Tìm kiếm',
-                    style: TextStyle(
-                        color: click == true ? Colors.white : Colors.grey,
-                        fontSize: 18),
-                  ),
-                ),
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      children: [
+        InkWell(
+          onTap: () {
+            changeColor();
+          },
+          child: Container(
+            height: SizeConst.h40,
+            width: SizeConst.w180,
+            decoration: BoxDecoration(
+                border: Border.all(
+                    color:
+                        click == true ? Colors.transparent : Colors.grey),
+                color: click == true ? Color(0xffe95433) : Colors.white),
+            child: Center(
+              child: Text(
+                'Tìm kiếm',
+                style: TextStyle(
+                    color: click == true ? Colors.white : Colors.grey,
+                    fontSize: 18),
               ),
             ),
-            InkWell(
-              onTap: () {
-                changeColor();
-              },
-              child: Container(
-                decoration: BoxDecoration(
-                    border: Border.all(
-                        color:
-                            click == false ? Colors.transparent : Colors.grey),
-                    color: click == false ? Color(0xffe95433) : Colors.white),
-                child: Padding(
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 50, vertical: 4),
-                  child: Text(
-                    'Nâng cao',
-                    style: TextStyle(
-                        color: click == false ? Colors.white : Colors.grey,
-                        fontSize: 18),
-                  ),
-                ),
+          ),
+        ),
+        InkWell(
+          onTap: () {
+            changeColor();
+          },
+          child: Container(
+            height: SizeConst.h40,
+            width: SizeConst.w180,
+            decoration: BoxDecoration(
+                border: Border.all(
+                    color:
+                        click == false ? Colors.transparent : Colors.grey),
+                color: click == false ? Color(0xffe95433) : Colors.white),
+            child: Center(
+              child: Text(
+                'Nâng cao',
+                style: TextStyle(
+                    color: click == false ? Colors.white : Colors.grey,
+                    fontSize: 18),
               ),
             ),
-          ],
-        ));
+          ),
+        ),
+      ],
+    );
   }
 
   Widget listviewHoti() {
@@ -467,13 +469,13 @@ class _ViewHomeState extends State<ViewHome> {
             child: Container(
               margin: EdgeInsets.only(right: 10),
               decoration: BoxDecoration(
-                  // border:  Border.all(color: click==true?Colors.transparent:Colors.grey),
-                  color: Color(0xffe95433)),
+                border: Border.all()
+              ),
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Text(
                   '${list![int]} (15)',
-                  style: TextStyle(color: Colors.white),
+                  style: TextStyle(color: Colors.black),
                 ),
               ),
             ),
