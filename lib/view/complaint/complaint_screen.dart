@@ -13,6 +13,11 @@ class ComplaintScreen extends StatefulWidget {
 
 class _ComplaintScreenState extends State<ComplaintScreen> {
   @override
+  void initState() {
+    visi = false;
+    super.initState();
+  }
+  @override
   bool visi= true;
   List<String> _locations = ['web1', 'web2',]; // Option 2
   String ?_selectedLocation; // Option 2

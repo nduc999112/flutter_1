@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_1/home8_hung_0912/gridData.dart';
+import 'package:flutter_1/view/save/detail.dart';
 class homeScreen8 extends StatefulWidget {
   @override
   _homeScreen8State createState() => _homeScreen8State();
@@ -101,38 +102,46 @@ class _homeScreen8State extends State<homeScreen8> {
                   mainAxisSpacing: 10),
               itemCount: listdata.length,
               itemBuilder: (BuildContext ctx, index) {
-                return Container(
-                  alignment: Alignment.center,
-                  child: Center(
-                    child: Column(
+                return InkWell(
+                  onTap: (){
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Detail()),
+                    );
+                  },
+                  child: Container(
+                    alignment: Alignment.center,
+                    child: Center(
+                      child: Column(
 
-                      children: [
-                        Image.network('${listdata[index].image}',height:170,width: double.maxFinite,),
-                        Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 8),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text('${listdata[index].use}'),
-                              SizedBox(height: 10,),
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Text('${listdata[index].price}',style: TextStyle(color: Color(0xffc22c2a), fontSize: 13, fontWeight: FontWeight.bold),),
-                                  Text('${listdata[index].sl}', style: TextStyle(fontSize: 13),),
-                                ],
-                              ),
-                              SizedBox(height: 3,),
-                              Text('${listdata[index].tt}', style: TextStyle(fontSize: 12),),
-                            ],
+                        children: [
+                          Image.network('${listdata[index].image}',height:170,width: double.maxFinite,),
+                          Padding(
+                            padding: const EdgeInsets.symmetric(horizontal: 8),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text('${listdata[index].use}'),
+                                SizedBox(height: 10,),
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Text('${listdata[index].price}',style: TextStyle(color: Color(0xffc22c2a), fontSize: 13, fontWeight: FontWeight.bold),),
+                                    Text('${listdata[index].sl}', style: TextStyle(fontSize: 13),),
+                                  ],
+                                ),
+                                SizedBox(height: 3,),
+                                Text('${listdata[index].tt}', style: TextStyle(fontSize: 12),),
+                              ],
+                            ),
                           ),
-                        ),
-                      ],
-                    ),
-                  ),
-                  decoration: BoxDecoration(
-                      color: Colors.white,
+                        ],
                       ),
+                    ),
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                        ),
+                  ),
                 );
               }),
         ),

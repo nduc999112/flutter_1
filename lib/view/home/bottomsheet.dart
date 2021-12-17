@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_1/contants/size_const.dart';
+import 'package:flutter_1/home8_hung_0912/home_Screen.dart';
 import 'package:flutter_1/utils/image.dart';
 class Bottomsheet extends StatefulWidget {
   const Bottomsheet({Key? key, onContactAdd}) : super(key: key);
@@ -85,19 +86,27 @@ class _BottomsheetState extends State<Bottomsheet> {
                 ),
               ),
               SizedBox(height: 10,),
-              Container(
-                height: 50,
-                width: 160,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(30),
-                  color: Color(0xfff0532e),
-                ),
-                child:  Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Icon(Icons.search, color: Colors.white,),
-                    Text('Đăng Nhập', style: TextStyle(color: Colors.white),),
-                  ],
+              InkWell(
+                onTap: (){
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => homeScreen8()),
+                  );
+                },
+                child: Container(
+                  height: 50,
+                  width: 160,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(30),
+                    color: Color(0xfff0532e),
+                  ),
+                  child:  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(Icons.search, color: Colors.white,),
+                      Text('Đăng Nhập', style: TextStyle(color: Colors.white),),
+                    ],
+                  ),
                 ),
               ),
             ],

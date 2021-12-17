@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_1/contants/size_const.dart';
 import 'package:flutter_1/utils/image.dart';
+import 'package:flutter_1/view/dashboard/view.dart';
+import 'package:flutter_1/view/home/home_ui.dart';
 import 'package:flutter_1/view/home11_hung/sign_in.dart';
 
 import 'forgot.dart';
@@ -55,7 +57,7 @@ class _Home11ScreenState extends State<Home11Screen>
                   Expanded(
                     flex: 8,
                     child: DefaultTabController(
-                      initialIndex: 1,
+                      initialIndex: 0,
                       length: 2,
                       child: Scaffold(
                         body: Container(
@@ -147,18 +149,26 @@ class _Home11ScreenState extends State<Home11Screen>
                                               },
                                                 child: Text('Quên mật khẩu?', style: TextStyle(fontSize: 13, color: Colors.grey),)),
                                             SizedBox(height: 15,),
-                                           Container(
-                                              height: SizeConst.h50,
-                                              width: double.infinity,
-                                              decoration: BoxDecoration(
-                                                borderRadius: BorderRadius.circular(30),
-                                                color: (user1 =='' && pass1 =='')
-                                                 ?Color(0xfff4a898)
-                                                  :Color(0xffea5433)
+                                           InkWell(
+                                             onTap: (){
+                                               Navigator.push(
+                                                 context,
+                                                 MaterialPageRoute(builder: (context) => Dashboard()),
+                                               );
+                                             },
+                                             child: Container(
+                                                height: SizeConst.h50,
+                                                width: double.infinity,
+                                                decoration: BoxDecoration(
+                                                  borderRadius: BorderRadius.circular(30),
+                                                  color: (user1 =='' && pass1 =='')
+                                                   ?Color(0xfff4a898)
+                                                    :Color(0xffea5433)
 
+                                                ),
+                                                child: Center(child: Text('Đăng Nhập', style: TextStyle(color: Colors.white),)),
                                               ),
-                                              child: Center(child: Text('Đăng Nhập', style: TextStyle(color: Colors.white),)),
-                                            ),
+                                           ),
                                           ],
                                         ),
                                       ),

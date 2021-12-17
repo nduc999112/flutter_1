@@ -170,7 +170,7 @@ class _ViewHomeState extends State<ViewHome> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: _appbar(),
+      appBar: _appbar(context),
       body: Container(
         child: Column(
           children: [
@@ -366,13 +366,17 @@ class _ViewHomeState extends State<ViewHome> {
     );
   }
 
-  PreferredSizeWidget _appbar() {
+  PreferredSizeWidget _appbar(BuildContext context) {
     return AppBar(
       elevation: 0,
       backgroundColor: Color(0xffec846b),
       leading: Padding(
         padding: const EdgeInsets.only(left: 3),
-        child: Icon(Icons.arrow_back_ios),
+        child: InkWell(
+          onTap: (){
+            Navigator.pop(context);
+          },
+            child: Icon(Icons.arrow_back_ios)),
       ),
       centerTitle: true,
       title: Padding(
@@ -414,14 +418,13 @@ class _ViewHomeState extends State<ViewHome> {
             width: SizeConst.w180,
             decoration: BoxDecoration(
                 border: Border.all(
-                    color:
-                        click == true ? Colors.transparent : Colors.grey),
-                color: click == true ? Color(0xffe95433) : Colors.white),
+                    color: Colors.grey),
+                color: Color(0xffe95433) ),
             child: Center(
               child: Text(
                 'Tìm kiếm',
                 style: TextStyle(
-                    color: click == true ? Colors.white : Colors.grey,
+                    color: Colors.white,
                     fontSize: 18),
               ),
             ),
@@ -436,14 +439,12 @@ class _ViewHomeState extends State<ViewHome> {
             width: SizeConst.w180,
             decoration: BoxDecoration(
                 border: Border.all(
-                    color:
-                        click == false ? Colors.transparent : Colors.grey),
-                color: click == false ? Color(0xffe95433) : Colors.white),
+                    color: Colors.grey),
+                ),
             child: Center(
               child: Text(
                 'Nâng cao',
-                style: TextStyle(
-                    color: click == false ? Colors.white : Colors.grey,
+                style: TextStyle(color: Colors.grey,
                     fontSize: 18),
               ),
             ),

@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_1/contants/size_const.dart';
 
 class DialogView extends StatefulWidget {
   const DialogView({Key? key}) : super(key: key);
@@ -96,24 +97,22 @@ class _DialogState extends State<DialogView> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Container(
+                        height: SizeConst.h40,
+                        width: SizeConst.w130,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(20),
                             color: Colors.white,
                             border: Border.all(color: Colors.grey)),
-                        child: Padding(
-                          padding:
-                          const EdgeInsets.symmetric(horizontal: 48, vertical: 12),
-                          child: Text('Đóng'),
-                        ),
+                        child: Center(child: Text('Đóng')),
                       ),
                       Container(
+                        height: SizeConst.h40,
+                        width: SizeConst.w130,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(20),
                             color: Color(0xffe95433),
                             border: Border.all(color: Colors.grey)),
-                        child: Padding(
-                          padding:
-                          const EdgeInsets.symmetric(horizontal: 48, vertical: 12),
+                        child: Center(
                           child: Text(
                             'Xác nhận',
                             style: TextStyle(color: Colors.white),

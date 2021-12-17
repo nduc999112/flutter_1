@@ -33,6 +33,7 @@ class _HomeScreen10State extends State<HomeScreen10> {
   }
   @override
   void initState() {
+    visi = false;
     // TODO: implement initState
     historys=[
       History(

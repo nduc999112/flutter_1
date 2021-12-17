@@ -12,7 +12,7 @@ class Home9View extends StatefulWidget {
 }
 
 class _Home9ViewState extends State<Home9View> {
-
+   bool visi = true;
   List<String> _locations = ['Tiền mặt', 'Thẻ ATM',]; // Option 2
   String ?_selectedLocation; // Option 2
   String ?selectState;
@@ -152,70 +152,76 @@ class _Home9ViewState extends State<Home9View> {
             SizedBox(
               height: SizeConst.h10,
             ),
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: 10),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                Expanded(child: AppConstant.Widget1(tittle: 'Từ ngày',textAlign: TextAlign.center)),
+            Visibility(
+              visible: visi,
+              child: Padding(
+                padding: EdgeInsets.symmetric(horizontal: 10),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                  Expanded(child: AppConstant.Widget1(tittle: 'Từ ngày',textAlign: TextAlign.center)),
+                    SizedBox(
+                      width: SizeConst.w4,
+                    ),
+                  InkWell(
+                      onTap: (){
+                        _selectDate(context);
+                      },
+                      child: Icon(Icons.calendar_today,color: Colors.red,size: 30,)),
                   SizedBox(
-                    width: SizeConst.w4,
+                    width: SizeConst.w16,
                   ),
-                InkWell(
-                    onTap: (){
-                      _selectDate(context);
-                    },
-                    child: Icon(Icons.calendar_today,color: Colors.red,size: 30,)),
-                SizedBox(
-                  width: SizeConst.w16,
-                ),
-                Expanded(child: AppConstant.Widget1(tittle: 'Đến ngày',textAlign: TextAlign.center)),
-                  SizedBox(
-                    width: SizeConst.w4,
-                  ),
-                InkWell(
-                    onTap: (){
-                      _selectDate(context);
-                    },
-                    child: Icon(Icons.calendar_today,color: Colors.red,size: 30,))
-              ],),
+                  Expanded(child: AppConstant.Widget1(tittle: 'Đến ngày',textAlign: TextAlign.center)),
+                    SizedBox(
+                      width: SizeConst.w4,
+                    ),
+                  InkWell(
+                      onTap: (){
+                        _selectDate(context);
+                      },
+                      child: Icon(Icons.calendar_today,color: Colors.red,size: 30,))
+                ],),
+              ),
             ),
             SizedBox(
               height: SizeConst.h10,
             ),
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: 10.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Expanded(
-                    child:AppConstant.dropdownField(
-                      title: 'Loại giao dịch',
-                      list: _locations,
-                      valueselect: _selectedLocation,
-                      function: (value){
-                        setState(() {
-                          _selectedLocation=value;
-                        });
-                      }
-                    )
-                  ),
-                  SizedBox(
-                    width: SizeConst.w10,
-                  ),
-                  Expanded(
+            Visibility(
+              visible: visi,
+              child: Padding(
+                padding: EdgeInsets.symmetric(horizontal: 10.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Expanded(
                       child:AppConstant.dropdownField(
-                          title: 'Trạng thái',
-                          list: state,
-                          valueselect: selectState,
-                          function: (value){
-                            setState(() {
-                              selectState=value;
-                            });
-                          }
+                        title: 'Loại giao dịch',
+                        list: _locations,
+                        valueselect: _selectedLocation,
+                        function: (value){
+                          setState(() {
+                            _selectedLocation=value;
+                          });
+                        }
                       )
-                  )
-                ],
+                    ),
+                    SizedBox(
+                      width: SizeConst.w10,
+                    ),
+                    Expanded(
+                        child:AppConstant.dropdownField(
+                            title: 'Trạng thái',
+                            list: state,
+                            valueselect: selectState,
+                            function: (value){
+                              setState(() {
+                                selectState=value;
+                              });
+                            }
+                        )
+                    )
+                  ],
+                ),
               ),
             ),
             SizedBox(
@@ -241,15 +247,22 @@ class _Home9ViewState extends State<Home9View> {
                   ),
                   Flexible(
                     flex:1,
-                    child: Container(
-                        decoration: BoxDecoration(
-                            border: Border.all(color: Colors.grey)
-                        ),
-                        width: SizeConst.w180,
-                        child: Padding(
-                          padding:  EdgeInsets.all(10.0),
-                          child: Center(child: Text('Đóng nâng cao',style: TextStyle(color: Colors.grey),)),
-                        )),
+                    child: InkWell(
+                      onTap: (){
+                       setState(() {
+                         visi=!visi;
+                       });
+                      },
+                      child: Container(
+                          decoration: BoxDecoration(
+                              border: Border.all(color: Colors.grey)
+                          ),
+                          width: SizeConst.w180,
+                          child: Padding(
+                            padding:  EdgeInsets.all(10.0),
+                            child: Center(child: Text('Đóng nâng cao',style: TextStyle(color: Colors.grey),)),
+                          )),
+                    ),
                   ),
 
                 ],

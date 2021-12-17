@@ -1,7 +1,13 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_1/contants/size_const.dart';
+import 'package:flutter_1/home/home.dart';
+import 'package:flutter_1/home10_hung1012/home_screen.dart';
+import 'package:flutter_1/home6_hung_0712/home_screen.dart';
+import 'package:flutter_1/home7/home7_view.dart';
 import 'package:flutter_1/utils/size_utils.dart';
+import 'package:flutter_1/view/complaint/complaint_screen.dart';
+import 'package:flutter_1/view/deliveryAddress/delivery_address_view.dart';
 import 'package:flutter_1/view/pay/viewpay.dart';
 
 class Home5View extends StatefulWidget {
@@ -73,9 +79,7 @@ class _Home5ViewState extends State<Home5View> {
                                         height: SizeConst.h5,
                                       ),
                                       Text('${info?.email}',style: TextStyle(color: Colors.black,fontSize: SizeConst.size12,fontWeight: FontWeight.w300),),
-                                      SizedBox(
-                                        height: SizeConst.h10,
-                                      ),
+
                                       Row(
                                         children: [
                                           Icon(Icons.star,color:  Color(0xffea5634),size: 24,),
@@ -88,9 +92,17 @@ class _Home5ViewState extends State<Home5View> {
                               ),
                               Flexible(
                                   flex:1,child:
-                              Align(
-                                  alignment: Alignment.centerRight,
-                                  child: Icon(Icons.navigate_next,size: 35,)))
+                              InkWell(
+                                onTap: (){
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(builder: (context) => Home7Home()),
+                                  );
+                                },
+                                child: Align(
+                                    alignment: Alignment.centerRight,
+                                    child: Icon(Icons.navigate_next,size: 35,)),
+                              ))
                             ],
                           ),
                         ),
@@ -186,6 +198,12 @@ class _Home5ViewState extends State<Home5View> {
               ),
               itemTittle(title: 'Quản lý nhập hàng',),
               itemTitle2(
+                function: (){
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ViewHome()),
+                  );
+                },
                 title: 'Danh sách đơn hàng',
                   icon: Icons.file_copy_outlined
               ),
@@ -194,6 +212,12 @@ class _Home5ViewState extends State<Home5View> {
                 color: Colors.grey[300],
               ),
               itemTitle2(
+                  function: (){
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => ComplaintScreen()),
+                    );
+                  },
                   title: 'Quản lý khiến nại',
                   icon: Icons.insert_emoticon
               ),
@@ -202,6 +226,12 @@ class _Home5ViewState extends State<Home5View> {
                 color: Colors.grey[300],
               ),
               itemTitle2(
+                  function: (){
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => HomeSceen6()),
+                    );
+                  },
                   title: 'Quản lý kiện hàng',
                   icon: Icons.now_widgets
               ),
@@ -216,6 +246,12 @@ class _Home5ViewState extends State<Home5View> {
                 color: Colors.grey[300],
               ),
               itemTitle2(
+                  function: (){
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => HomeScreen10()),
+                    );
+                  },
                   title: 'Danh sách phiếu giao hàng',
                   icon: Icons.menu
               ),
@@ -224,6 +260,12 @@ class _Home5ViewState extends State<Home5View> {
                 color: Colors.grey[300],
               ),
               itemTitle2(
+                  function: (){
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => DeliveryAddressView()),
+                    );
+                  },
                   title: 'Địa chỉ nhận hàng',
                   icon: Icons.location_on_sharp
               ),
@@ -339,7 +381,7 @@ Widget itemTittle({String ?title}){
     ),
   );
 }
-Widget itemTitle2({IconData?icon,String ? title,bool?hide}){
+Widget itemTitle2({IconData?icon,String ? title,bool?hide,Function? function}){
   return Container(
     color: Colors.white,
     child: Padding(
@@ -354,9 +396,14 @@ Widget itemTitle2({IconData?icon,String ? title,bool?hide}){
               Text(title!,style: TextStyle(fontWeight: FontWeight.w400,fontSize: SizeConst.size14),)
             ],
           ),
-          Visibility(
-              visible: hide??true,
-              child: Icon(Icons.navigate_next,color: Colors.grey,))
+          InkWell(
+            onTap: (){
+              function!.call();
+            },
+            child: Visibility(
+                visible: hide??true,
+                child: Icon(Icons.navigate_next,color: Colors.grey,)),
+          )
         ],
       ),
     ),
