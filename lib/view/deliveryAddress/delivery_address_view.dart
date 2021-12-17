@@ -42,6 +42,7 @@ class _DeliveryAddressViewState extends State<DeliveryAddressView> {
                     itemCount: listAdress?.length,
                     itemBuilder: (context,int){
                       return Container(
+                        margin: EdgeInsets.only(bottom: SizeConst.h20),
                         child: Padding(
                           padding:  EdgeInsets.all(8.0),
                           child: Column(
@@ -49,13 +50,14 @@ class _DeliveryAddressViewState extends State<DeliveryAddressView> {
                             children: [
                               Row(
                                 children: [
-                                  Text('${listAdress?[int].name}'),
-                                  Text('- ${listAdress?[int].phone}')
+                                  Text('${listAdress?[int].name}',style: TextStyle(fontWeight: FontWeight.w400,fontSize: 15),),
+                                  Text('- ${listAdress?[int].phone}',style: TextStyle(fontWeight: FontWeight.w400,fontSize: 15)),
                                 ],
                               ),
-                              Text('${listAdress?[int].adress}'),
-                              Text('${listAdress?[int].address1}'),
-                              Text('${listAdress?[int].address2}'),
+                              SizedBox(height: SizeConst.h10,),
+                              Text('${listAdress?[int].adress}',style: TextStyle(fontWeight: FontWeight.w400,fontSize: 12,color: Colors.grey[400]),),
+                              Text('${listAdress?[int].address1}',style: TextStyle(fontWeight: FontWeight.w400,fontSize: 12,color: Colors.grey[400])),
+                              Text('${listAdress?[int].address2}',style: TextStyle(fontWeight: FontWeight.w400,fontSize: 12,color: Colors.grey[400])),
                             ],
                           ),
                         ),
@@ -63,7 +65,7 @@ class _DeliveryAddressViewState extends State<DeliveryAddressView> {
                     },
                   ),
                   SizedBox(
-                    height: SizeConst.h80,
+                    height: SizeConst.h100,
                   ),
                   Align(
                     alignment: Alignment.bottomCenter,
